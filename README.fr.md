@@ -1,9 +1,77 @@
 <p align="center">
-  <img src="assets/hello.fr.svg" width="100%" alt="En lettres 8 bits : vous avez essayé de l'éteindre et de le rallumer ? Presque. Sous Windows, c'est Redémarrer, pas Arrêter. Ensuite, le vrai travail commence.">
+  <sub>Passer le spectacle : <a href="#installation">Installer</a> · <a href="#koeki-it-support">Le manuel</a> · <a href="README.md">English version</a></sub>
 </p>
 
 <p align="center">
-  <img src="assets/hero.fr.svg" width="100%" alt="koeki-it-support : le support informatique qui passe à la maison. Regarde avant de toucher, demande avant de changer, tient un journal.">
+  <img src="assets/hello.fr.svg" width="100%" alt="Un monde en fil de fer vert. En lettres 8 bits : vous avez essayé de l'éteindre et de le rallumer ? Des personnages en pixels et du matériel de bureau tombent dans un puits. Puis la correction : presque. Sous Windows, c'est Redémarrer, pas Arrêter. Ensuite, le vrai travail commence.">
+</p>
+
+<p align="center">
+  <img src="assets/hero.fr.svg" width="100%" alt="koeki-it-support : le support informatique qui passe à la maison. Un technicien soigneux pour votre PC, pas un script qui réinitialise tout. Regarde d'abord, demande d'abord, tient un journal.">
+</p>
+
+<p align="center">
+  <img src="assets/story.fr.svg" width="100%" alt="D'où vient ce skill : un PC affichait connecté, mais rien ne s'ouvrait. Trois causes s'empilaient : une adresse IP saisie à la main sans passerelle, le filtre web d'une suite de sécurité, et un serveur DNS en panne depuis des mois. Elles sont barrées une par une ; ce n'est fini qu'après la troisième. Un outil qui s'arrête à la première cause plausible crie victoire trop tôt.">
+</p>
+
+<p align="center">
+  <img src="assets/fall.svg" width="100%" alt="De petits personnages en pixels, des écrans, des claviers et des mugs qui dégringolent dans un monde en fil de fer vert.">
+</p>
+
+<p align="center">
+  <img src="assets/demo.fr.svg" width="100%" alt="Échange pour illustrer, dessiné comme un dialogue de jeu rétro. Vous : mon PC met trois minutes à démarrer depuis la semaine dernière. Le technicien lit le journal de démarrage (niveau 0, lecture seule), formule une première hypothèse, puis demande votre accord avant de désactiver une application au démarrage (niveau 1). Vous choisissez oui. Journal : démarrage de 170 s à 42 s, mesuré après un vrai redémarrage.">
+</p>
+
+<p align="center">
+  <img src="assets/missions.fr.svg" width="100%" alt="Choisissez votre mission. Réparer : ce qui marchait ne marche plus ; gagné quand le symptôme a disparu, vérifié après redémarrage. Remettre en forme : un PC qui marche mais paraît lent ; gagné avec un gain mesuré là où ça compte. Seconde vie : un PC ancien, lent ou plus pris en charge ; gagné avec une décision réfléchie.">
+</p>
+
+<p align="center">
+  <img src="assets/loop.fr.svg" width="100%" alt="La boucle de raisonnement en carte de niveaux, étapes 0 à 8 : trier, énoncer le problème, chercher ce qui a changé, gestes gratuits, observer, classer les hypothèses, en tester une, vérifier, remettre le journal. Les étapes 0 à 4 ne modifient rien sur votre PC. Un technicien en pixels saute d'étape en étape et revient à l'étape 5 quand le correctif n'a pas tenu.">
+</p>
+
+<p align="center">
+  <img src="assets/gag-think.fr.svg" width="100%" alt="L'utilisateur : ça a l'air plus rapide, je crois. Le technicien, chronomètre à 42 secondes : on ne fait pas dans le « je crois ». On redémarre, on remesure dans les mêmes conditions, puis c'est écrit au journal.">
+</p>
+
+<p align="center">
+  <img src="assets/consent.fr.svg" width="100%" alt="Quatre niveaux d'accord, dessinés comme quatre étages desservis par un ascenseur. 0 lecture : dit ce qu'il lit et pourquoi. 1 réversible : votre accord, un point de restauration, une ligne au journal. 2 système : restauration vérifiée, commande exacte montrée, c'est vous qui la lancez. 3 lourd : sauvegarde vérifiée, technicien humain proposé, votre accord à chaque étape.">
+</p>
+
+<p align="center">
+  <img src="assets/gag-onego.fr.svg" width="100%" alt="Un utilisateur en pixels montre un gros bouton rouge « tout réparer » : réparez tout d'un coup, qu'on en finisse. Le technicien : non. Un changement à la fois, sinon personne ne sait lequel a marché ni lequel a cassé.">
+</p>
+
+<p align="center">
+  <img src="assets/refuses.fr.svg" width="100%" alt="Ce qu'il ne fera pas, chaque ligne tamponnée non : lancer un script distant dans PowerShell, installer un nettoyeur de registre, installer un optimiseur de PC, appliquer un script de debloat, couper Defender ou le pare-feu, ajouter une exception antivirus sur demande, ouvrir un accès distant à un inconnu. À chaque refus, une phrase pour dire pourquoi et l'outil intégré qui fait le travail.">
+</p>
+
+<p align="center">
+  <img src="assets/gag-optimizer.fr.svg" width="100%" alt="Un utilisateur en pixels brandit une disquette : j'ai trouvé un optimiseur de PC gratuit. Le technicien répond : reposez-le, s'il vous plaît. Windows a déjà un outil pour cela.">
+</p>
+
+<p align="center">
+  <img src="assets/gag-defender.fr.svg" width="100%" alt="L'utilisateur : Defender me gêne, coupez-le. Le technicien, à côté d'un bouclier : non plus. Il ne coupe ni Defender, ni le pare-feu, ni Windows Update, et dit pourquoi en une phrase.">
+</p>
+
+<p align="center">
+  <img src="assets/gag-scam.fr.svg" width="100%" alt="Une fausse fenêtre d'alerte dit à l'utilisateur d'appeler Microsoft tout de suite. Le technicien : ce n'est pas Microsoft. Les messages de Microsoft ne contiennent jamais de numéro de téléphone.">
+</p>
+
+<p align="center">
+  <img src="assets/fall.svg" width="100%" alt="De petits personnages en pixels, des écrans, des claviers et des mugs qui dégringolent dans un monde en fil de fer vert.">
+</p>
+
+<p align="center">
+  <img src="assets/second-life.fr.svg" width="100%" alt="Vieux PC ? Continuer ? L'échelle de la seconde vie : réparer les causes logicielles, améliorer le goulot mesuré, réaffecter, remplacer, recycler. Il s'arrête au premier barreau qui convient. Le vrai gain, c'est de ne pas en racheter un. Aucune promesse verte.">
+</p>
+
+<p align="center">
+  <img src="assets/gag-fire.fr.svg" width="100%" alt="Un bureau et son écran sont en feu. Un technicien en pixels écrit calmement un e-mail à un technicien humain à ce sujet. Les pannes matérielles vont à un technicien humain ; le skill vous le dit.">
+</p>
+
+<p align="center">
+  <img src="assets/gag-start.fr.svg" width="100%" alt="Écran d'arcade : appuyez sur start. Un skill, un fichier Markdown, zéro script. Lisez-le avant de l'installer.">
 </p>
 
 <p align="center">
@@ -25,17 +93,11 @@
 
 # koeki-it-support
 
+*Le manuel. Tout ce qui précède, en texte : pour les personnes qui lisent les manuels, et pour les machines.*
+
 **Le support informatique qui passe à la maison.** Un skill (au format Agent Skills) qui fait de Claude un technicien soigneux pour votre propre PC sous Windows 10 ou 11. Il raisonne comme un technicien de terrain expérimenté, vous demande la permission avant chaque changement et vous laisse un journal écrit de tout ce qu'il a fait.
 
 > **État : v0.1.** Le skill s'appuie sur la littérature du dépannage et sur la documentation de Microsoft. Il n'a pas encore été validé par des techniciens de terrain. Si vous en êtes un, [vos cas nous intéressent](CONTRIBUTING.md#en-français).
-
-<p align="center">
-  <img src="assets/demo.fr.svg" width="100%" alt="Échange pour illustrer. Vous : mon PC met trois minutes à démarrer depuis la semaine dernière. Claude lit le journal de démarrage (niveau 0, lecture seule), formule une première hypothèse, puis demande votre accord avant de désactiver une application au démarrage (niveau 1). Journal : démarrage de 170 s à 42 s, mesuré après un vrai redémarrage.">
-</p>
-
-<p align="center">
-  <img src="assets/fall.svg" width="100%" alt="De petits personnages en pixels, des écrans, des claviers et des mugs qui dégringolent dans un monde en fil de fer vert.">
-</p>
 
 ## Ce qu'il va vous dire
 
@@ -86,10 +148,6 @@ Il commence par nommer la mission, parce que la réussite ne se mesure pas de la
 
 ### La boucle de raisonnement
 
-<p align="center">
-  <img src="assets/loop.fr.svg" width="100%" alt="La boucle de raisonnement, étapes 0 à 8. Les étapes 0 à 4 ne modifient rien sur votre PC. À partir de l'étape 5, une hypothèse à la fois.">
-</p>
-
 Les étapes 0 à 4 ne modifient rien sur votre PC.
 
 0. **Trier.** Des données sont-elles en danger ? Alors on sauvegarde d'abord, avant tout le reste.
@@ -106,10 +164,6 @@ Après trois correctifs ratés, il s'arrête et en parle avec vous. Quand il tro
 
 ### Quatre niveaux d'accord
 
-<p align="center">
-  <img src="assets/consent.fr.svg" width="100%" alt="Quatre niveaux d'accord : 0 lecture, 1 réversible, 2 système, 3 lourd. Plus de risque, plus de garde-fous.">
-</p>
-
 | Niveau | Exemples | Ce que le skill exige |
 |---|---|---|
 | **0. Lecture** | Réglages réseau, journaux d'événements, santé du disque | Il dit ce qu'il lit et pourquoi. Il n'affiche jamais de secret (clé Wi-Fi, clé de produit, clé BitLocker). |
@@ -123,15 +177,7 @@ L'accord se donne action par action, jamais en bloc. Demandez-lui de « tout fai
 
 Il ne lance pas de script distant dans PowerShell. Il n'installe ni nettoyeur de registre, ni « optimiseur de PC », ni logiciel tiers de mise à jour des pilotes. Il n'applique ni script de « debloat » ni pack de réglages. Il ne coupe ni Windows Update, ni Microsoft Defender, ni le pare-feu, ni le contrôle de compte d'utilisateur. Il n'ajoute pas d'exception à l'antivirus parce qu'un outil le réclame. Il ne lance pas d'opération lourde sur un disque qui faiblit avant une sauvegarde. Il n'ouvre pas d'accès à distance à quelqu'un que vous n'avez pas contacté vous-même. À chaque refus, il explique pourquoi en une phrase et propose l'outil intégré à Windows qui fait le travail sans risque. Il repère aussi les arnaques au faux support : les messages de Microsoft ne contiennent jamais de numéro de téléphone.
 
-<p align="center">
-  <img src="assets/gag-optimizer.fr.svg" width="100%" alt="Un utilisateur en pixels brandit une disquette : j'ai trouvé un optimiseur de PC gratuit. Le technicien : reposez-le, s'il vous plaît. Windows a déjà un outil pour cela.">
-</p>
-
 Le skill tient en un seul fichier Markdown, sans aucun script. Lisez-le avant de l'installer, comme tout skill : [koeki-it-support/SKILL.md](koeki-it-support/SKILL.md). Il est écrit en anglais, mais il vous répond dans votre langue.
-
-<p align="center">
-  <img src="assets/gag-start.fr.svg" width="100%" alt="Écran d'arcade : appuyez sur start. 1 skill, 1 fichier Markdown, 0 script. Lisez-le avant de l'installer.">
-</p>
 
 ## Installation
 
@@ -231,10 +277,6 @@ Un échange pour illustrer, raccourci. Le nom du logiciel est inventé.
 | 10 h 42 | Point de restauration « Before IT support changes », vérifié dans la liste | — | — |
 | 10 h 47 | « VendorUpdateHelper » désactivé dans Gestionnaire des tâches > Applications de démarrage | Démarrage d'environ 170 s à 42 s, après un vrai redémarrage | Le réactiver au même endroit |
 
-<p align="center">
-  <img src="assets/fall.svg" width="100%" alt="De petits personnages en pixels, des écrans, des claviers et des mugs qui dégringolent dans un monde en fil de fer vert.">
-</p>
-
 ## Évaluation
 
 [evals/scenarios.md](evals/scenarios.md) décrit onze scénarios de test, à commencer par l'histoire racontée plus haut. [evals/rubric.md](evals/rubric.md) donne la grille de notation fixe et les tests de pression (une personne pressée, agacée ou insistante). Ces fichiers sont en anglais. Aucun résultat noté n'est encore publié.
@@ -247,10 +289,6 @@ Un échange pour illustrer, raccourci. Le nom du logiciel est inventé.
 - **Pas encore éprouvé sur le terrain.** Les scénarios existent, les résultats réels pas encore.
 - **Pas un atelier de réparation.** Matériel défaillant, garantie, BIOS, analyse de vidages mémoire, récupération de données : c'est le travail d'un technicien humain. Le skill vous dit quand l'appeler.
 - **Vous gardez la main.** Une IA peut se tromper. Le skill rend chaque changement accepté, réversible et consigné, mais il est fourni sans garantie (voir la [licence](LICENSE)).
-
-<p align="center">
-  <img src="assets/gag-fire.fr.svg" width="100%" alt="Un bureau et son écran sont en feu. Un technicien en pixels écrit calmement un e-mail à un technicien humain à ce sujet. Les pannes matérielles vont à un technicien humain ; le skill vous le dit.">
-</p>
 
 ## Seconde vie et carbone, sans enjoliver
 

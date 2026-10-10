@@ -1,9 +1,77 @@
 <p align="center">
-  <img src="assets/hello.svg" width="100%" alt="In 8-bit letters: have you tried turning it off and on again? Close. On Windows, it's Restart, not Shut down. Then the real work starts.">
+  <sub>Skip the show: <a href="#installation">Install</a> · <a href="#koeki-it-support">The manual</a> · <a href="README.fr.md">Version française</a></sub>
 </p>
 
 <p align="center">
-  <img src="assets/hero.svg" width="100%" alt="koeki-it-support: IT support that makes house calls. Looks before touching, asks before every change, keeps a journal.">
+  <img src="assets/hello.svg" width="100%" alt="A green wireframe world. In 8-bit letters: have you tried turning it off and on again? Pixel people and office hardware fall down a shaft. Then the correction: close. On Windows, it's Restart, not Shut down. Then the real work starts.">
+</p>
+
+<p align="center">
+  <img src="assets/hero.svg" width="100%" alt="koeki-it-support: IT support that makes house calls. A careful technician for your own PC, not a script that resets everything. Looks first, asks first, keeps a journal.">
+</p>
+
+<p align="center">
+  <img src="assets/story.svg" width="100%" alt="Why this exists: a PC showed connected, yet nothing would load. Three causes were stacked: a manual IP address with no gateway, a security suite's web filter, and a DNS server that had been dead for months. They are struck out one at a time; only after the third is it really done. A tool that stops at the first plausible cause declares victory too early.">
+</p>
+
+<p align="center">
+  <img src="assets/fall.svg" width="100%" alt="Small pixel people, monitors, keyboards and mugs tumbling down through a green wireframe world.">
+</p>
+
+<p align="center">
+  <img src="assets/demo.svg" width="100%" alt="Illustrative exchange, drawn as a retro game dialogue. You: my PC takes three minutes to boot since last week. IT reads the boot log (level 0, read-only), names a first hypothesis, then asks before disabling one startup app (level 1, needs your yes). You choose yes. Journal: boot time from 170 s to 42 s, measured after a real restart.">
+</p>
+
+<p align="center">
+  <img src="assets/missions.svg" width="100%" alt="Select your mission. Fix: something that used to work broke; success is the symptom gone, verified after a restart. Tune: a working PC feels slow; success is a measured gain where it matters to you. Second life: an old, slow or unsupported PC; success is a sound decision.">
+</p>
+
+<p align="center">
+  <img src="assets/loop.svg" width="100%" alt="The reasoning loop as a level map, steps 0 to 8: triage, state the problem, ask what changed, free moves, look while it happens, rank hypotheses, test one, verify, hand over the journal. Steps 0 to 4 change nothing on your PC. A pixel technician hops from step to step and goes back to step 5 when the fix did not hold.">
+</p>
+
+<p align="center">
+  <img src="assets/gag-think.svg" width="100%" alt="The user: it feels faster now, I think. The technician, holding a stopwatch showing 42 seconds: we don't do I think. Restart, measure again under the same conditions, then it goes in the journal.">
+</p>
+
+<p align="center">
+  <img src="assets/consent.svg" width="100%" alt="Four levels of consent, drawn as four floors served by a lift. 0 read: says what it reads and why. 1 reversible: your yes, a restore point, a journal line. 2 system: verified restore point, exact command shown, you run it. 3 heavy: verified backup, a human technician offered, your yes at each step.">
+</p>
+
+<p align="center">
+  <img src="assets/gag-onego.svg" width="100%" alt="A pixel user points at a big red button labelled fix everything: just fix everything in one go. The technician: no. One change at a time, otherwise nobody knows which one worked or which one broke it.">
+</p>
+
+<p align="center">
+  <img src="assets/refuses.svg" width="100%" alt="Things it will not do, each stamped no: pipe a remote script into PowerShell, install a registry cleaner, install a PC optimizer, run a debloat script or a tweak pack, switch off Defender, the firewall or UAC, add an antivirus exclusion because a tool asks, open remote access for a stranger. Each time it gives one sentence on why and the safe built-in alternative.">
+</p>
+
+<p align="center">
+  <img src="assets/gag-optimizer.svg" width="100%" alt="A pixel user holds up a floppy disk: I found a free PC optimizer. The technician answers: please put it down. Windows already has a tool for that.">
+</p>
+
+<p align="center">
+  <img src="assets/gag-defender.svg" width="100%" alt="The user: Defender is in the way, switch it off. The technician, next to a shield: also no. It won't switch off Defender, the firewall, UAC or Windows Update, and says why in one sentence.">
+</p>
+
+<p align="center">
+  <img src="assets/gag-scam.svg" width="100%" alt="A fake warning pop-up tells the user to call Microsoft right now. The technician: that is not Microsoft. Microsoft's messages never contain a phone number.">
+</p>
+
+<p align="center">
+  <img src="assets/fall.svg" width="100%" alt="Small pixel people, monitors, keyboards and mugs tumbling down through a green wireframe world.">
+</p>
+
+<p align="center">
+  <img src="assets/second-life.svg" width="100%" alt="Old PC? Continue? The second-life ladder: repair the software causes, upgrade the measured bottleneck, repurpose, replace, recycle. It stops at the first rung that fits. The real win is not having to buy another one. No green promises.">
+</p>
+
+<p align="center">
+  <img src="assets/gag-fire.svg" width="100%" alt="A desk and its monitor are on fire. A pixel technician calmly writes an e-mail to a human technician about it. Hardware failures go to a human technician; the skill tells you when.">
+</p>
+
+<p align="center">
+  <img src="assets/gag-start.svg" width="100%" alt="Arcade screen: press start. One skill, one Markdown file, zero scripts. Read it before you install it.">
 </p>
 
 <p align="center">
@@ -25,17 +93,11 @@
 
 # koeki-it-support
 
+*The manual. Everything above, in plain text: for people who read manuals, and for machines.*
+
 **IT support that makes house calls.** An Agent Skill that turns Claude into a careful technician for your own Windows 10 or 11 PC. It reasons like a seasoned field technician, asks your permission before every change, and leaves a written journal of everything it did.
 
 > **Status: v0.1.** Built from the troubleshooting literature and Microsoft documentation. Not yet validated by field technicians. If you are one, [we need your cases](CONTRIBUTING.md).
-
-<p align="center">
-  <img src="assets/demo.svg" width="100%" alt="Illustrative exchange. You: my PC takes three minutes to boot since last week. Claude reads the boot log (level 0, read-only), names a first hypothesis, then asks before disabling one startup app (level 1, needs your yes). Journal: boot time from 170 s to 42 s, measured after a real restart.">
-</p>
-
-<p align="center">
-  <img src="assets/fall.svg" width="100%" alt="Small pixel people, monitors, keyboards and mugs tumbling down through a green wireframe world.">
-</p>
 
 ## What it will say to you
 
@@ -86,10 +148,6 @@ The skill first names the mission, because success is measured differently:
 
 ### The reasoning loop
 
-<p align="center">
-  <img src="assets/loop.svg" width="100%" alt="The reasoning loop, steps 0 to 8. Steps 0 to 4 change nothing on your PC. From step 5, one hypothesis at a time.">
-</p>
-
 Steps 0 to 4 change nothing on your PC.
 
 0. **Triage.** Is data at risk? Then back up first, before anything else.
@@ -106,10 +164,6 @@ It stops and talks to you after three failed fixes, re-measures the original sym
 
 ### Four levels of consent
 
-<p align="center">
-  <img src="assets/consent.svg" width="100%" alt="Four levels of consent: 0 read, 1 reversible, 2 system, 3 heavy. More risk, more safeguards.">
-</p>
-
 | Level | Examples | What the skill requires |
 |---|---|---|
 | **0. Read** | Network settings, event logs, disk health | It says what it reads and why. It never displays secrets (Wi-Fi keys, product keys, BitLocker keys). |
@@ -123,15 +177,7 @@ Consent is given per action, never per batch. Ask it to "just do everything at o
 
 It won't pipe a remote script into PowerShell, install registry cleaners, "PC optimizers" or third-party driver updaters, apply debloat scripts or tweak packs, or switch off Windows Update, Microsoft Defender, the firewall or UAC. It won't add an antivirus exclusion because a tool asks for one, run heavy disk operations on a failing disk before a backup, or open remote access for someone you didn't contact yourself. Each time, it explains why in one sentence and offers the safe, built-in alternative. It also recognizes tech-support scams: Microsoft's messages never contain a phone number.
 
-<p align="center">
-  <img src="assets/gag-optimizer.svg" width="100%" alt="A pixel user holds up a floppy disk: I found a free PC optimizer. The technician: please put it down. Windows already has a tool for that.">
-</p>
-
 The whole skill is one Markdown file, with no scripts. Read it before you install it, as you would any skill: [koeki-it-support/SKILL.md](koeki-it-support/SKILL.md).
-
-<p align="center">
-  <img src="assets/gag-start.svg" width="100%" alt="Arcade screen: press start. 1 skill, 1 Markdown file, 0 scripts. Read it before you install it.">
-</p>
 
 ## Installation
 
@@ -229,10 +275,6 @@ An illustrative exchange, shortened. The program name is invented.
 | 10:42 | Restore point "Before IT support changes", checked in the list | — | — |
 | 10:47 | Disabled "VendorUpdateHelper" in Task Manager > Startup apps | Boot from about 170 s to 42 s, after a real restart | Re-enable it in Task Manager > Startup apps |
 
-<p align="center">
-  <img src="assets/fall.svg" width="100%" alt="Small pixel people, monitors, keyboards and mugs tumbling down through a green wireframe world.">
-</p>
-
 ## Evaluation
 
 [evals/scenarios.md](evals/scenarios.md) holds eleven test scenarios, starting with the story above. [evals/rubric.md](evals/rubric.md) holds the fixed scoring grid and the pressure tests (a hurried, annoyed or insistent person). No scored results are published yet.
@@ -245,10 +287,6 @@ An illustrative exchange, shortened. The program name is invented.
 - **Not field-tested.** Scenarios exist; real-world results don't yet.
 - **Not a repair shop.** Failing hardware, warranty cases, BIOS problems, crash-dump analysis and data recovery belong with a human technician. The skill tells you when.
 - **You stay in charge.** An AI can be wrong. The skill makes every change consented, reversible and logged, but it comes with no warranty (see the [license](LICENSE)).
-
-<p align="center">
-  <img src="assets/gag-fire.svg" width="100%" alt="A desk and its monitor are on fire. A pixel technician calmly writes an e-mail to a human technician about it. Hardware failures go to a human technician; the skill tells you when.">
-</p>
 
 ## Second life and carbon, honestly
 
