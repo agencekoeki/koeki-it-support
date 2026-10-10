@@ -111,11 +111,11 @@ Les intitulés ci-dessous sont ceux de l'interface en anglais ; ils peuvent êtr
 
 **Claude (claude.ai et l'application de bureau)**
 
-1. Ouvrez **Customize > Plugins**, puis **Add > Add marketplace**.
-2. Saisissez `agencekoeki/koeki-it-support`.
-3. Ajoutez le plugin **koeki-it-support** depuis cette marketplace.
+1. Ouvrez **Customize > Plugins**, puis **Add > Add marketplace > Add from a repository**.
+2. Saisissez `agencekoeki/koeki-it-support`, laissez **Sync automatically** activé, puis choisissez **Sync**.
+3. Choisissez **Add** à côté de **Koeki IT Support**.
 
-Pour récupérer une nouvelle version, choisissez **Check for updates** sur la marketplace, ou activez **Sync automatically**. Le plugin est enregistré sur votre compte : il est donc aussi disponible dans Cowork et Claude Code.
+Avec **Sync automatically**, le plugin est tenu à jour quand ce dépôt change. Il est enregistré sur votre compte : il est donc aussi disponible dans Cowork et Claude Code.
 
 Source : [Plugins](https://claude.com/docs/plugins/overview), documentation de Claude.
 
