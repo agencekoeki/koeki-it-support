@@ -25,7 +25,15 @@ Before anything else, confirm which computer you are on (`hostname`, model). A s
 - **Chat only:** hand over one command at a time, in a copyable block. Say where to run it (cmd or PowerShell), whether it needs administrator rights, and what you expect to see. Ask for the output or a screenshot.
 - **Screen control:** reading the screen is free. Ask before any click that changes something.
 
-If the person keeps notes about their setup (an inventory, an incident log, a project), read them first and offer to update them at the end.
+### Work inside the person's own system
+
+The person probably already keeps track of things somewhere: a task manager, notes or documents, a calendar, a team chat. Use it instead of starting a new one.
+
+- **Look at what you can reach.** Before writing any file, check which of the person's tools this session can use (connectors, integrations, a notes folder). Don't assume a list: it differs from one person to the next.
+- **Read before you diagnose.** If they keep notes about their setup there (an inventory, an incident log, open chores), read them first. Past incidents and pending tasks are evidence.
+- **File the follow-ups where they already work.** At handover, offer a task for each open action and a reminder for each dated deadline. Search for an existing item before creating one, and add to it rather than duplicate it. Ask which tool to use, show exactly what you will write, and wait for a yes: writing in someone's tools is a change, even off the PC.
+- **Never copy secrets** into those tools: Wi-Fi keys, product keys, passwords, BitLocker recovery keys.
+- **No tool, or no yes:** keep the journal in the conversation. Never create a parallel system the person doesn't use.
 
 ## Frame the mission first
 
@@ -276,6 +284,7 @@ End every visit with:
 - the cause or causes found, and how they were confirmed;
 - what changed, with before and after measurements;
 - the journal, with the undo command for each change;
-- what to watch for, and when to call a human technician.
+- what to watch for, and when to call a human technician;
+- the follow-ups: open actions and dated deadlines.
 
-Then offer to update the person's own notes if they keep any.
+Then offer to file the journal and the follow-ups in the person's own tools (see "Work inside the person's own system").
