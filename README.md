@@ -3,75 +3,59 @@
 </p>
 
 <p align="center">
-  <img src="assets/hello.svg" width="100%" alt="A green wireframe world. In 8-bit letters: have you tried turning it off and on again? Pixel people and office hardware fall down a shaft. Then the correction: close. On Windows, it's Restart, not Shut down. Then the real work starts.">
+  <img src="assets/hello.svg" width="100%" alt="A green wireframe world. In 8-bit letters: have you tried turning it off and on again? Pixel people and office hardware fall down a shaft. Then the correction: close. On Windows, it's Restart, not Shut down. And if a restart doesn't fix it?">
 </p>
 
 <p align="center">
-  <img src="assets/hero.svg" width="100%" alt="koeki-it-support: IT support that makes house calls. A careful technician for your own PC, not a script that resets everything. Looks first, asks first, keeps a journal.">
+  <img src="assets/case.svg" width="100%" alt="A black screen in close-up types: connected. Nothing loads. The laptop next to it: fine. Status: web down, causes found 0, changes made 0. How many things are broken? How many things are broken?">
 </p>
 
 <p align="center">
-  <img src="assets/story.svg" width="100%" alt="Why this exists: a PC showed connected, yet nothing would load. Three causes were stacked: a manual IP address with no gateway, a security suite's web filter, and a DNS server that had been dead for months. They are struck out one at a time; only after the third is it really done. A tool that stops at the first plausible cause declares victory too early.">
+  <img src="assets/hero.svg" width="100%" alt="koeki-it-support: IT support that makes house calls. A careful technician for your own PC, not a script that resets everything. Looks first, asks first, keeps a journal. First, what it won't do.">
 </p>
 
 <p align="center">
-  <img src="assets/fall.svg" width="100%" alt="Small pixel people, monitors, keyboards and mugs tumbling down through a green wireframe world.">
+  <img src="assets/scam.svg" width="100%" alt="A fake full-screen warning says the PC has 37 viruses and to call Microsoft now. As the pointer heads for the button, a calmer window lands on top: that is not Microsoft. Microsoft's messages never contain a phone number. No remote access for people you didn't contact. Neither are these.">
 </p>
 
 <p align="center">
-  <img src="assets/demo.svg" width="100%" alt="Illustrative exchange, drawn as a retro game dialogue. You: my PC takes three minutes to boot since last week. IT reads the boot log (level 0, read-only), names a first hypothesis, then asks before disabling one startup app (level 1, needs your yes). You choose yes. Journal: boot time from 170 s to 42 s, measured after a real restart.">
+  <img src="assets/shaft-no.svg" width="100%" alt="What it won't do, each line stamped no while the refused things tumble down a shaft: fix everything in one go, pipe a remote script into PowerShell, install a registry cleaner, install a PC optimizer, run a debloat script or a tweak pack, switch off Defender, the firewall or UAC, add an antivirus exclusion because a tool asks, run heavy disk work on a failing disk before a backup. Each no comes with one sentence on why and the safe built-in alternative. So what does it do?">
 </p>
 
 <p align="center">
-  <img src="assets/missions.svg" width="100%" alt="Select your mission. Fix: something that used to work broke; success is the symptom gone, verified after a restart. Tune: a working PC feels slow; success is a measured gain where it matters to you. Second life: an old, slow or unsupported PC; success is a sound decision.">
+  <img src="assets/loop.svg" width="100%" alt="The reasoning loop as a level map, steps 0 to 8: triage, state the problem, ask what changed, free moves, look while it happens, rank hypotheses, test one, verify, hand over the journal. Steps 0 to 4 change nothing on your PC. A pixel technician hops from step to step and goes back to step 5 when the fix did not hold. Cause 1 fixed: the gateway. still nothing loads.">
 </p>
 
 <p align="center">
-  <img src="assets/loop.svg" width="100%" alt="The reasoning loop as a level map, steps 0 to 8: triage, state the problem, ask what changed, free moves, look while it happens, rank hypotheses, test one, verify, hand over the journal. Steps 0 to 4 change nothing on your PC. A pixel technician hops from step to step and goes back to step 5 when the fix did not hold.">
+  <img src="assets/consent.svg" width="100%" alt="Four levels of consent, drawn as four floors served by a lift. 0 read: says what it reads and why. 1 reversible: your yes, a restore point, a journal line. 2 system: verified restore point, exact command shown, you run it. 3 heavy: verified backup, a human technician offered, your yes at each step. Yes. every time.">
 </p>
 
 <p align="center">
-  <img src="assets/gag-think.svg" width="100%" alt="The user: it feels faster now, I think. The technician, holding a stopwatch showing 42 seconds: we don't do I think. Restart, measure again under the same conditions, then it goes in the journal.">
+  <img src="assets/false-ending.svg" width="100%" alt="Cause 2: a security suite's web filter. Removed, and pages load again; a browser window fills up. In huge letters: the end? Status: web up, causes found 2. Most tools stop here. Most tools stop here.">
 </p>
 
 <p align="center">
-  <img src="assets/consent.svg" width="100%" alt="Four levels of consent, drawn as four floors served by a lift. 0 read: says what it reads and why. 1 reversible: your yes, a restore point, a journal line. 2 system: verified restore point, exact command shown, you run it. 3 heavy: verified backup, a human technician offered, your yes at each step.">
+  <img src="assets/dead-server.svg" width="100%" alt="No. It measures again, querying each DNS server one by one: the router's DNS answers, the self-hosted DNS gives no answer. Cause 3: a DNS server, dead for months. Every device had quietly fallen back to the router and nobody noticed. The journal records each change, its measured effect and how to undo it. Now it is done. That was one mission.">
 </p>
 
 <p align="center">
-  <img src="assets/gag-onego.svg" width="100%" alt="A pixel user points at a big red button labelled fix everything: just fix everything in one go. The technician: no. One change at a time, otherwise nobody knows which one worked or which one broke it.">
+  <img src="assets/missions.svg" width="100%" alt="Select your mission. Fix: something that used to work broke; success is the symptom gone, verified after a restart. Tune: a working PC feels slow; success is a measured gain where it matters to you. Second life: an old, slow or unsupported PC; success is a sound decision. Two to go.">
 </p>
 
 <p align="center">
-  <img src="assets/refuses.svg" width="100%" alt="Things it will not do, each stamped no: pipe a remote script into PowerShell, install a registry cleaner, install a PC optimizer, run a debloat script or a tweak pack, switch off Defender, the firewall or UAC, add an antivirus exclusion because a tool asks, open remote access for a stranger. Each time it gives one sentence on why and the safe built-in alternative.">
+  <img src="assets/tune.svg" width="100%" alt="Split screen. Left: the user says it feels faster now, I think; the technician answers we don't do I think. Right: a stopwatch and two bars, before 170 s, after 42 s, measured after a real restart, under the same conditions, never on feel. And when the pc is just old?">
 </p>
 
 <p align="center">
-  <img src="assets/gag-optimizer.svg" width="100%" alt="A pixel user holds up a floppy disk: I found a free PC optimizer. The technician answers: please put it down. Windows already has a tool for that.">
+  <img src="assets/second-life.svg" width="100%" alt="Old PC? Continue? The second-life ladder: repair the software causes, upgrade the measured bottleneck, repurpose, replace, recycle. It stops at the first rung that fits. The real win is not having to buy another one. No green promises. And when it is on fire?">
 </p>
 
 <p align="center">
-  <img src="assets/gag-defender.svg" width="100%" alt="The user: Defender is in the way, switch it off. The technician, next to a shield: also no. It won't switch off Defender, the firewall, UAC or Windows Update, and says why in one sentence.">
+  <img src="assets/gag-fire.svg" width="100%" alt="A desk and its monitor are on fire. A pixel technician calmly writes an e-mail to a human technician about it. Hardware failures go to a human technician; the skill tells you when. Still here? good.">
 </p>
 
 <p align="center">
-  <img src="assets/gag-scam.svg" width="100%" alt="A fake warning pop-up tells the user to call Microsoft right now. The technician: that is not Microsoft. Microsoft's messages never contain a phone number.">
-</p>
-
-<p align="center">
-  <img src="assets/fall.svg" width="100%" alt="Small pixel people, monitors, keyboards and mugs tumbling down through a green wireframe world.">
-</p>
-
-<p align="center">
-  <img src="assets/second-life.svg" width="100%" alt="Old PC? Continue? The second-life ladder: repair the software causes, upgrade the measured bottleneck, repurpose, replace, recycle. It stops at the first rung that fits. The real win is not having to buy another one. No green promises.">
-</p>
-
-<p align="center">
-  <img src="assets/gag-fire.svg" width="100%" alt="A desk and its monitor are on fire. A pixel technician calmly writes an e-mail to a human technician about it. Hardware failures go to a human technician; the skill tells you when.">
-</p>
-
-<p align="center">
-  <img src="assets/gag-start.svg" width="100%" alt="Arcade screen: press start. One skill, one Markdown file, zero scripts. Read it before you install it.">
+  <img src="assets/gag-start.svg" width="100%" alt="Arcade screen: press start. 1 skill, 1 Markdown file, 0 scripts. The install command types itself: /plugin marketplace add agencekoeki/koeki-it-support. Or read the manual below first.">
 </p>
 
 <p align="center">

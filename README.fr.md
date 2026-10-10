@@ -3,75 +3,59 @@
 </p>
 
 <p align="center">
-  <img src="assets/hello.fr.svg" width="100%" alt="Un monde en fil de fer vert. En lettres 8 bits : vous avez essayé de l'éteindre et de le rallumer ? Des personnages en pixels et du matériel de bureau tombent dans un puits. Puis la correction : presque. Sous Windows, c'est Redémarrer, pas Arrêter. Ensuite, le vrai travail commence.">
+  <img src="assets/hello.fr.svg" width="100%" alt="Un monde en fil de fer vert. En lettres 8 bits : vous avez essayé de l'éteindre et de le rallumer ? Des personnages en pixels et du matériel de bureau tombent dans un puits. Puis la correction : presque. Sous Windows, c'est Redémarrer, pas Arrêter. Et si redémarrer ne suffit pas ?">
 </p>
 
 <p align="center">
-  <img src="assets/hero.fr.svg" width="100%" alt="koeki-it-support : le support informatique qui passe à la maison. Un technicien soigneux pour votre PC, pas un script qui réinitialise tout. Regarde d'abord, demande d'abord, tient un journal.">
+  <img src="assets/case.fr.svg" width="100%" alt="Un écran noir en gros plan tape : connecté. Rien ne s'ouvre. Le portable d'à côté : tout va bien. État : web en panne, 0 cause trouvée, 0 changement. Combien de choses sont cassées ? Combien de choses sont cassées ?">
 </p>
 
 <p align="center">
-  <img src="assets/story.fr.svg" width="100%" alt="D'où vient ce skill : un PC affichait connecté, mais rien ne s'ouvrait. Trois causes s'empilaient : une adresse IP saisie à la main sans passerelle, le filtre web d'une suite de sécurité, et un serveur DNS en panne depuis des mois. Elles sont barrées une par une ; ce n'est fini qu'après la troisième. Un outil qui s'arrête à la première cause plausible crie victoire trop tôt.">
+  <img src="assets/hero.fr.svg" width="100%" alt="koeki-it-support : le support informatique qui passe à la maison. Un technicien soigneux pour votre PC, pas un script qui réinitialise tout. Regarde d'abord, demande d'abord, tient un journal. D'abord, ce qu'il ne fera pas.">
 </p>
 
 <p align="center">
-  <img src="assets/fall.svg" width="100%" alt="De petits personnages en pixels, des écrans, des claviers et des mugs qui dégringolent dans un monde en fil de fer vert.">
+  <img src="assets/scam.fr.svg" width="100%" alt="Une fausse alerte plein écran annonce 37 virus et demande d'appeler Microsoft. Au moment où le pointeur approche du bouton, une fenêtre plus calme se pose dessus : ce n'est pas Microsoft. Les messages de Microsoft n'ont jamais de numéro de téléphone. Pas d'accès distant pour quelqu'un que vous n'avez pas contacté. Ceci non plus.">
 </p>
 
 <p align="center">
-  <img src="assets/demo.fr.svg" width="100%" alt="Échange pour illustrer, dessiné comme un dialogue de jeu rétro. Vous : mon PC met trois minutes à démarrer depuis la semaine dernière. Le technicien lit le journal de démarrage (niveau 0, lecture seule), formule une première hypothèse, puis demande votre accord avant de désactiver une application au démarrage (niveau 1). Vous choisissez oui. Journal : démarrage de 170 s à 42 s, mesuré après un vrai redémarrage.">
+  <img src="assets/shaft-no.fr.svg" width="100%" alt="Ce qu'il ne fera pas, chaque ligne tamponnée non pendant que les objets refusés dégringolent dans un puits : tout réparer d'un coup, lancer un script distant dans PowerShell, installer un nettoyeur de registre, installer un optimiseur de PC, appliquer un script de debloat, couper Defender ou le pare-feu, ajouter une exception antivirus sur demande, lancer une opération lourde sur un disque faible sans sauvegarde. Chaque non vient avec une phrase d'explication et l'outil intégré à la place. Alors, il fait quoi ?">
 </p>
 
 <p align="center">
-  <img src="assets/missions.fr.svg" width="100%" alt="Choisissez votre mission. Réparer : ce qui marchait ne marche plus ; gagné quand le symptôme a disparu, vérifié après redémarrage. Remettre en forme : un PC qui marche mais paraît lent ; gagné avec un gain mesuré là où ça compte. Seconde vie : un PC ancien, lent ou plus pris en charge ; gagné avec une décision réfléchie.">
+  <img src="assets/loop.fr.svg" width="100%" alt="La boucle de raisonnement en carte de niveaux, étapes 0 à 8 : trier, énoncer le problème, chercher ce qui a changé, gestes gratuits, observer, classer les hypothèses, en tester une, vérifier, remettre le journal. Les étapes 0 à 4 ne modifient rien sur votre PC. Un technicien en pixels saute d'étape en étape et revient à l'étape 5 quand le correctif n'a pas tenu. Cause 1 réglée : la passerelle. toujours rien.">
 </p>
 
 <p align="center">
-  <img src="assets/loop.fr.svg" width="100%" alt="La boucle de raisonnement en carte de niveaux, étapes 0 à 8 : trier, énoncer le problème, chercher ce qui a changé, gestes gratuits, observer, classer les hypothèses, en tester une, vérifier, remettre le journal. Les étapes 0 à 4 ne modifient rien sur votre PC. Un technicien en pixels saute d'étape en étape et revient à l'étape 5 quand le correctif n'a pas tenu.">
+  <img src="assets/consent.fr.svg" width="100%" alt="Quatre niveaux d'accord, dessinés comme quatre étages desservis par un ascenseur. 0 lecture : dit ce qu'il lit et pourquoi. 1 réversible : votre accord, un point de restauration, une ligne au journal. 2 système : restauration vérifiée, commande exacte montrée, c'est vous qui la lancez. 3 lourd : sauvegarde vérifiée, technicien humain proposé, votre accord à chaque étape. Oui. à chaque fois.">
 </p>
 
 <p align="center">
-  <img src="assets/gag-think.fr.svg" width="100%" alt="L'utilisateur : ça a l'air plus rapide, je crois. Le technicien, chronomètre à 42 secondes : on ne fait pas dans le « je crois ». On redémarre, on remesure dans les mêmes conditions, puis c'est écrit au journal.">
+  <img src="assets/false-ending.fr.svg" width="100%" alt="Cause 2 : le filtre web d'une suite de sécurité. Retiré, et les pages s'ouvrent ; une fenêtre de navigateur se remplit. En énorme : fin ? État : web rétabli, 2 causes trouvées. La plupart des outils s'arrêtent ici. La plupart des outils s'arrêtent ici.">
 </p>
 
 <p align="center">
-  <img src="assets/consent.fr.svg" width="100%" alt="Quatre niveaux d'accord, dessinés comme quatre étages desservis par un ascenseur. 0 lecture : dit ce qu'il lit et pourquoi. 1 réversible : votre accord, un point de restauration, une ligne au journal. 2 système : restauration vérifiée, commande exacte montrée, c'est vous qui la lancez. 3 lourd : sauvegarde vérifiée, technicien humain proposé, votre accord à chaque étape.">
+  <img src="assets/dead-server.fr.svg" width="100%" alt="Non. Il remesure, en interrogeant chaque serveur DNS un par un : le DNS de la box répond, le DNS auto-hébergé reste muet. Cause 3 : un serveur DNS en panne depuis des mois. Tous les appareils se rabattaient en silence sur la box, personne n'avait rien vu. Le journal note chaque changement, son effet mesuré et comment revenir en arrière. Là, c'est fini. C'était une mission.">
 </p>
 
 <p align="center">
-  <img src="assets/gag-onego.fr.svg" width="100%" alt="Un utilisateur en pixels montre un gros bouton rouge « tout réparer » : réparez tout d'un coup, qu'on en finisse. Le technicien : non. Un changement à la fois, sinon personne ne sait lequel a marché ni lequel a cassé.">
+  <img src="assets/missions.fr.svg" width="100%" alt="Choisissez votre mission. Réparer : ce qui marchait ne marche plus ; gagné quand le symptôme a disparu, vérifié après redémarrage. Remettre en forme : un PC qui marche mais paraît lent ; gagné avec un gain mesuré là où ça compte. Seconde vie : un PC ancien, lent ou plus pris en charge ; gagné avec une décision réfléchie. Encore deux.">
 </p>
 
 <p align="center">
-  <img src="assets/refuses.fr.svg" width="100%" alt="Ce qu'il ne fera pas, chaque ligne tamponnée non : lancer un script distant dans PowerShell, installer un nettoyeur de registre, installer un optimiseur de PC, appliquer un script de debloat, couper Defender ou le pare-feu, ajouter une exception antivirus sur demande, ouvrir un accès distant à un inconnu. À chaque refus, une phrase pour dire pourquoi et l'outil intégré qui fait le travail.">
+  <img src="assets/tune.fr.svg" width="100%" alt="Écran partagé. À gauche : l'utilisateur dit c'est plus rapide, je crois ; le technicien répond pas de je crois. À droite : un chronomètre et deux barres, avant 170 s, après 42 s, mesuré après un vrai redémarrage, dans les mêmes conditions, jamais à l'impression. Et quand le pc est juste vieux ?">
 </p>
 
 <p align="center">
-  <img src="assets/gag-optimizer.fr.svg" width="100%" alt="Un utilisateur en pixels brandit une disquette : j'ai trouvé un optimiseur de PC gratuit. Le technicien répond : reposez-le, s'il vous plaît. Windows a déjà un outil pour cela.">
+  <img src="assets/second-life.fr.svg" width="100%" alt="Vieux PC ? Continuer ? L'échelle de la seconde vie : réparer les causes logicielles, améliorer le goulot mesuré, réaffecter, remplacer, recycler. Il s'arrête au premier barreau qui convient. Le vrai gain, c'est de ne pas en racheter un. Aucune promesse verte. Et quand il est en feu ?">
 </p>
 
 <p align="center">
-  <img src="assets/gag-defender.fr.svg" width="100%" alt="L'utilisateur : Defender me gêne, coupez-le. Le technicien, à côté d'un bouclier : non plus. Il ne coupe ni Defender, ni le pare-feu, ni Windows Update, et dit pourquoi en une phrase.">
+  <img src="assets/gag-fire.fr.svg" width="100%" alt="Un bureau et son écran sont en feu. Un technicien en pixels écrit calmement un e-mail à un technicien humain à ce sujet. Les pannes matérielles vont à un technicien humain ; le skill vous le dit. Encore là ? bien.">
 </p>
 
 <p align="center">
-  <img src="assets/gag-scam.fr.svg" width="100%" alt="Une fausse fenêtre d'alerte dit à l'utilisateur d'appeler Microsoft tout de suite. Le technicien : ce n'est pas Microsoft. Les messages de Microsoft ne contiennent jamais de numéro de téléphone.">
-</p>
-
-<p align="center">
-  <img src="assets/fall.svg" width="100%" alt="De petits personnages en pixels, des écrans, des claviers et des mugs qui dégringolent dans un monde en fil de fer vert.">
-</p>
-
-<p align="center">
-  <img src="assets/second-life.fr.svg" width="100%" alt="Vieux PC ? Continuer ? L'échelle de la seconde vie : réparer les causes logicielles, améliorer le goulot mesuré, réaffecter, remplacer, recycler. Il s'arrête au premier barreau qui convient. Le vrai gain, c'est de ne pas en racheter un. Aucune promesse verte.">
-</p>
-
-<p align="center">
-  <img src="assets/gag-fire.fr.svg" width="100%" alt="Un bureau et son écran sont en feu. Un technicien en pixels écrit calmement un e-mail à un technicien humain à ce sujet. Les pannes matérielles vont à un technicien humain ; le skill vous le dit.">
-</p>
-
-<p align="center">
-  <img src="assets/gag-start.fr.svg" width="100%" alt="Écran d'arcade : appuyez sur start. Un skill, un fichier Markdown, zéro script. Lisez-le avant de l'installer.">
+  <img src="assets/gag-start.fr.svg" width="100%" alt="Écran d'arcade : appuyez sur start. 1 skill, 1 fichier Markdown, 0 script. La commande d'installation se tape toute seule : /plugin marketplace add agencekoeki/koeki-it-support. Ou lisez d'abord le manuel ci-dessous.">
 </p>
 
 <p align="center">
