@@ -1,10 +1,32 @@
+<p align="center">
+  <img src="assets/hero.fr.svg" width="100%" alt="koeki-it-support : le support informatique qui passe à la maison. Regarde avant de toucher, demande avant de changer, tient un journal.">
+</p>
+
+<p align="center">
+  <a href="https://github.com/agencekoeki/koeki-it-support/releases/latest"><img alt="version" src="https://img.shields.io/github/v/release/agencekoeki/koeki-it-support?label=version&color=f5b83d&labelColor=0a0d16"></a>
+  <a href="LICENSE"><img alt="licence MIT" src="https://img.shields.io/badge/licence-MIT-5a9be0?labelColor=0a0d16"></a>
+  <a href="https://agentskills.io"><img alt="format Agent Skills" src="https://img.shields.io/badge/format-Agent%20Skills-5fd0a0?labelColor=0a0d16"></a>
+  <img alt="Windows 10 | 11" src="https://img.shields.io/badge/Windows-10%20%7C%2011-5a9be0?labelColor=0a0d16">
+  <img alt="scripts: aucun" src="https://img.shields.io/badge/scripts-aucun-f6eedb?labelColor=0a0d16">
+</p>
+
+<p align="center">
+  <a href="#installation"><b>Installer</b></a> ·
+  <a href="#ce-que-fait-le-skill">Fonctionnement</a> ·
+  <a href="#exemple">Exemple</a> ·
+  <a href="koeki-it-support/SKILL.md">Lire le skill</a> ·
+  <a href="README.md">English version</a>
+</p>
+
 # koeki-it-support
 
 **Le support informatique qui passe à la maison.** Un skill (au format Agent Skills) qui fait de Claude un technicien soigneux pour votre propre PC sous Windows 10 ou 11. Il raisonne comme un technicien de terrain expérimenté, vous demande la permission avant chaque changement et vous laisse un journal écrit de tout ce qu'il a fait.
 
-[English version](README.md) · v0.1 · [licence MIT](LICENSE) · [lire le skill](koeki-it-support/SKILL.md)
-
 > **État : v0.1.** Le skill s'appuie sur la littérature du dépannage et sur la documentation de Microsoft. Il n'a pas encore été validé par des techniciens de terrain. Si vous en êtes un, [vos cas nous intéressent](CONTRIBUTING.md#en-français).
+
+<p align="center">
+  <img src="assets/demo.fr.svg" width="100%" alt="Échange pour illustrer. Vous : mon PC met trois minutes à démarrer depuis la semaine dernière. Claude lit le journal de démarrage (niveau 0, lecture seule), formule une première hypothèse, puis demande votre accord avant de désactiver une application au démarrage (niveau 1). Journal : démarrage de 170 s à 42 s, mesuré après un vrai redémarrage.">
+</p>
 
 ## D'où vient ce skill
 
@@ -40,6 +62,10 @@ Il commence par nommer la mission, parce que la réussite ne se mesure pas de la
 
 ### La boucle de raisonnement
 
+<p align="center">
+  <img src="assets/loop.fr.svg" width="100%" alt="La boucle de raisonnement, étapes 0 à 8. Les étapes 0 à 4 ne modifient rien sur votre PC. À partir de l'étape 5, une hypothèse à la fois.">
+</p>
+
 Les étapes 0 à 4 ne modifient rien sur votre PC.
 
 0. **Trier.** Des données sont-elles en danger ? Alors on sauvegarde d'abord, avant tout le reste.
@@ -55,6 +81,10 @@ Les étapes 0 à 4 ne modifient rien sur votre PC.
 Après trois correctifs ratés, il s'arrête et en parle avec vous. Quand il trouve une première cause, il remesure le symptôme de départ. Il passe la main à un technicien humain pour les pannes matérielles, le BIOS et la récupération de données.
 
 ### Quatre niveaux d'accord
+
+<p align="center">
+  <img src="assets/consent.fr.svg" width="100%" alt="Quatre niveaux d'accord : 0 lecture, 1 réversible, 2 système, 3 lourd. Plus de risque, plus de garde-fous.">
+</p>
 
 | Niveau | Exemples | Ce que le skill exige |
 |---|---|---|
@@ -73,11 +103,38 @@ Le skill tient en un seul fichier Markdown, sans aucun script. Lisez-le avant de
 
 ## Installation
 
-Téléchargez `koeki-it-support.zip` depuis la [dernière version publiée](https://github.com/agencekoeki/koeki-it-support/releases/latest). Il contient le dossier `koeki-it-support/` et son `SKILL.md`.
+### En plugin (reste à jour)
 
-### Claude (claude.ai et l'application de bureau)
+Ce dépôt est aussi une marketplace de plugins : Claude peut le suivre, et vous n'avez pas à retélécharger un zip à chaque version.
 
 Les intitulés ci-dessous sont ceux de l'interface en anglais ; ils peuvent être traduits dans la vôtre.
+
+**Claude (claude.ai et l'application de bureau)**
+
+1. Ouvrez **Customize > Plugins**, puis **Add > Add marketplace**.
+2. Saisissez `agencekoeki/koeki-it-support`.
+3. Ajoutez le plugin **koeki-it-support** depuis cette marketplace.
+
+Pour récupérer une nouvelle version, choisissez **Check for updates** sur la marketplace, ou activez **Sync automatically**. Le plugin est enregistré sur votre compte : il est donc aussi disponible dans Cowork et Claude Code.
+
+Source : [Plugins](https://claude.com/docs/plugins/overview), documentation de Claude.
+
+**Claude Code**
+
+```
+/plugin marketplace add agencekoeki/koeki-it-support
+/plugin install koeki-it-support@koeki
+```
+
+Décrivez ensuite votre problème, ou tapez `/koeki-it-support:koeki-it-support`.
+
+Le plugin suit les commits de ce dépôt. Pour le mettre à jour, ouvrez `/plugin`, allez dans **Marketplaces**, choisissez **koeki**, puis **Update marketplace**. Sur le même écran, **Enable auto-update** laisse Claude Code le faire pour vous (désactivé par défaut pour les marketplaces qui ne sont pas celles d'Anthropic).
+
+Source : [Install and manage plugins](https://code.claude.com/docs/en/plugins/install), documentation de Claude Code.
+
+### En skill, depuis le zip (claude.ai et l'application de bureau)
+
+Téléchargez `koeki-it-support.zip` depuis la [dernière version publiée](https://github.com/agencekoeki/koeki-it-support/releases/latest). Il contient le dossier `koeki-it-support/` et son `SKILL.md`.
 
 1. Vérifiez que l'exécution de code est activée : **Settings > Capabilities > Code execution and file creation**. Sur les offres Team et Enterprise, c'est un propriétaire de l'organisation qui la gère.
 2. Ouvrez **Customize > Skills**, cliquez sur **+**, puis **Create skill > Upload a skill**.
@@ -87,7 +144,7 @@ Les skills personnalisés sont disponibles sur les offres Free, Pro, Max, Team e
 
 Source : [Use skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude), centre d'aide de Claude.
 
-### Claude Code
+### En skill, à la main (Claude Code)
 
 Copiez le dossier `koeki-it-support` (celui qui contient `SKILL.md`) dans `~/.claude/skills/` pour l'utiliser dans tous vos projets, ou dans le dossier `.claude/skills/` d'un projet.
 

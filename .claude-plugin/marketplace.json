@@ -1,0 +1,16 @@
+{
+  "name": "koeki",
+  "description": "Agent Skills by KOEKI. Consent-first IT support for your own Windows 10/11 PC.",
+  "owner": {
+    "name": "KOEKI SAS",
+    "url": "https://www.koeki.fr"
+  },
+  "plugins": [
+    {
+      "name": "koeki-it-support",
+      "description": "Consent-first PC technician for your own Windows 10/11 computer: diagnoses before touching, asks before every change, keeps a journal.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

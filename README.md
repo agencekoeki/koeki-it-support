@@ -1,10 +1,32 @@
+<p align="center">
+  <img src="assets/hero.svg" width="100%" alt="koeki-it-support: IT support that makes house calls. Looks before touching, asks before every change, keeps a journal.">
+</p>
+
+<p align="center">
+  <a href="https://github.com/agencekoeki/koeki-it-support/releases/latest"><img alt="release" src="https://img.shields.io/github/v/release/agencekoeki/koeki-it-support?label=release&color=f5b83d&labelColor=0a0d16"></a>
+  <a href="LICENSE"><img alt="license MIT" src="https://img.shields.io/badge/license-MIT-5a9be0?labelColor=0a0d16"></a>
+  <a href="https://agentskills.io"><img alt="format Agent Skills" src="https://img.shields.io/badge/format-Agent%20Skills-5fd0a0?labelColor=0a0d16"></a>
+  <img alt="Windows 10 | 11" src="https://img.shields.io/badge/Windows-10%20%7C%2011-5a9be0?labelColor=0a0d16">
+  <img alt="scripts: none" src="https://img.shields.io/badge/scripts-none-f6eedb?labelColor=0a0d16">
+</p>
+
+<p align="center">
+  <a href="#installation"><b>Install</b></a> ·
+  <a href="#what-it-does">How it works</a> ·
+  <a href="#example">Example</a> ·
+  <a href="koeki-it-support/SKILL.md">Read the skill</a> ·
+  <a href="README.fr.md">Version française</a>
+</p>
+
 # koeki-it-support
 
 **IT support that makes house calls.** An Agent Skill that turns Claude into a careful technician for your own Windows 10 or 11 PC. It reasons like a seasoned field technician, asks your permission before every change, and leaves a written journal of everything it did.
 
-[Version française](README.fr.md) · v0.1 · [MIT license](LICENSE) · [Read the skill](koeki-it-support/SKILL.md)
-
 > **Status: v0.1.** Built from the troubleshooting literature and Microsoft documentation. Not yet validated by field technicians. If you are one, [we need your cases](CONTRIBUTING.md).
+
+<p align="center">
+  <img src="assets/demo.svg" width="100%" alt="Illustrative exchange. You: my PC takes three minutes to boot since last week. Claude reads the boot log (level 0, read-only), names a first hypothesis, then asks before disabling one startup app (level 1, needs your yes). Journal: boot time from 170 s to 42 s, measured after a real restart.">
+</p>
 
 ## Why this exists
 
@@ -40,6 +62,10 @@ The skill first names the mission, because success is measured differently:
 
 ### The reasoning loop
 
+<p align="center">
+  <img src="assets/loop.svg" width="100%" alt="The reasoning loop, steps 0 to 8. Steps 0 to 4 change nothing on your PC. From step 5, one hypothesis at a time.">
+</p>
+
 Steps 0 to 4 change nothing on your PC.
 
 0. **Triage.** Is data at risk? Then back up first, before anything else.
@@ -55,6 +81,10 @@ Steps 0 to 4 change nothing on your PC.
 It stops and talks to you after three failed fixes, re-measures the original symptom after the first cause is found, and hands hardware failures, BIOS problems and data recovery over to a human technician.
 
 ### Four levels of consent
+
+<p align="center">
+  <img src="assets/consent.svg" width="100%" alt="Four levels of consent: 0 read, 1 reversible, 2 system, 3 heavy. More risk, more safeguards.">
+</p>
 
 | Level | Examples | What the skill requires |
 |---|---|---|
@@ -73,9 +103,36 @@ The whole skill is one Markdown file, with no scripts. Read it before you instal
 
 ## Installation
 
-Download `koeki-it-support.zip` from the [latest release](https://github.com/agencekoeki/koeki-it-support/releases/latest). It contains the `koeki-it-support/` folder with its `SKILL.md`.
+### As a plugin (stays up to date)
 
-### Claude (claude.ai and the desktop app)
+This repository is also a plugin marketplace: Claude can follow it, so you don't download a zip again for each version.
+
+**Claude (claude.ai and the desktop app)**
+
+1. Go to **Customize > Plugins**, then **Add > Add marketplace**.
+2. Enter `agencekoeki/koeki-it-support`.
+3. Add the **koeki-it-support** plugin from that marketplace.
+
+To pull a new version, select **Check for updates** on the marketplace, or turn on **Sync automatically**. The plugin is saved to your account, so it is also available in Cowork and Claude Code.
+
+Source: [Plugins](https://claude.com/docs/plugins/overview), Claude documentation.
+
+**Claude Code**
+
+```
+/plugin marketplace add agencekoeki/koeki-it-support
+/plugin install koeki-it-support@koeki
+```
+
+Then describe your problem, or type `/koeki-it-support:koeki-it-support`.
+
+The plugin follows this repository's commits. To update it, open `/plugin`, go to **Marketplaces**, select **koeki**, then **Update marketplace**. On the same screen, **Enable auto-update** makes Claude Code do it for you (it is off by default for marketplaces that aren't Anthropic's).
+
+Source: [Install and manage plugins](https://code.claude.com/docs/en/plugins/install), Claude Code documentation.
+
+### As a skill, from the zip (claude.ai and the desktop app)
+
+Download `koeki-it-support.zip` from the [latest release](https://github.com/agencekoeki/koeki-it-support/releases/latest). It contains the `koeki-it-support/` folder with its `SKILL.md`.
 
 1. Check that code execution is on: **Settings > Capabilities > Code execution and file creation**. On Team and Enterprise plans, an organization owner controls this.
 2. Go to **Customize > Skills**, click **+**, then **Create skill > Upload a skill**.
@@ -85,7 +142,7 @@ Custom skills are available on the Free, Pro, Max, Team and Enterprise plans. In
 
 Source: [Use skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude), Claude Help Center.
 
-### Claude Code
+### As a skill, by hand (Claude Code)
 
 Copy the `koeki-it-support` folder (the one that contains `SKILL.md`) into `~/.claude/skills/` to use it in all your projects, or into a project's `.claude/skills/` folder.
 

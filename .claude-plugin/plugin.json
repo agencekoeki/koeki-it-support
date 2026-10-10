@@ -1,0 +1,11 @@
+{
+  "name": "koeki-it-support",
+  "displayName": "Koeki IT Support",
+  "description": "Consent-first PC technician for your own Windows 10/11 computer: diagnoses before touching, asks before every change, keeps a journal.",
+  "author": { "name": "KOEKI SAS", "url": "https://www.koeki.fr" },
+  "homepage": "https://github.com/agencekoeki/koeki-it-support",
+  "repository": "https://github.com/agencekoeki/koeki-it-support",
+  "license": "MIT",
+  "keywords": ["it-support", "windows", "troubleshooting", "pc-repair"],
+  "skills": ["./koeki-it-support"]
+}
