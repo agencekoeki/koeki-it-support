@@ -43,7 +43,15 @@
 </p>
 
 <p align="center">
-  <img src="assets/tune.svg" width="100%" alt="Split screen. Left: the user says it feels faster now, I think; the technician answers we don't do I think. Right: a stopwatch and two bars, before 170 s, after 42 s, measured after a real restart, under the same conditions, never on feel. And when the pc is just old?">
+  <img src="assets/tune.svg" width="100%" alt="Split screen. Left: the user says it feels faster now, I think; the technician answers we don't do I think. Right: a stopwatch and two bars, before 170 s, after 42 s, measured after a real restart, under the same conditions, never on feel. And when the disk is full?">
+</p>
+
+<p align="center">
+  <img src="assets/disk-full.svg" width="100%" alt="Disk full. Of what, nobody knows, so it measures before anything is deleted. Four steps: ask Windows first (Settings, System, Storage); if still unclear, a map from a guest tool, for looking; free one thing, with your yes, item by item; measure again and stop when there is room. A disk map fills in: videos 60 GB, old Windows 25 GB, restore points 12 GB, downloads 9 GB, and three padlocked grey blocks, WinSxS, Installer and drivers. The pointer heads for WinSxS and gets a stamp: not by hand. The videos are moved, copy checked first, and free space goes from 3 GB to 63 GB. Illustrative figures. And if Windows can't say which folder?">
+</p>
+
+<p align="center">
+  <img src="assets/guest-tools.svg" width="100%" alt="Guest tools: they come in for one question, they do not move in. At the door, six checks are ticked one by one: address typed, not searched; archive hash checked; nothing extra in the zip; signer's name read out; licence fits the place; no installer, no driver. Then the guest list, on visitor badges: WinDirStat (open source), which folders fill the disk; Sysinternals du (Microsoft), the same but can only measure; Autoruns (Microsoft), what really starts at boot; CrystalDiskInfo (open source), raw disk health figures. Used, deleted, written in the journal. Built-in tools first; free-for-personal-use tools stay out of the office. A rejected archive falls down the shaft. And when the PC is just old?">
 </p>
 
 <p align="center">
@@ -70,6 +78,7 @@
 <p align="center">
   <a href="#installation"><b>Install</b></a> ·
   <a href="#what-it-does">How it works</a> ·
+  <a href="#guest-tools">Guest tools</a> ·
   <a href="#example">Example</a> ·
   <a href="koeki-it-support/SKILL.md">Read the skill</a> ·
   <a href="README.fr.md">Version française</a>
@@ -81,7 +90,7 @@
 
 **IT support that makes house calls.** An Agent Skill that turns Claude into a careful technician for your own Windows 10 or 11 PC. It reasons like a seasoned field technician, asks your permission before every change, and leaves a written journal of everything it did.
 
-> **Status: v0.1.** Built from the troubleshooting literature and Microsoft documentation. Not yet validated by field technicians. If you are one, [we need your cases](CONTRIBUTING.md).
+> **Status: v0.2.** Built from the troubleshooting literature and Microsoft documentation. New in 0.2: [making room on a full disk](#making-room) and [guest tools](#guest-tools). Not yet validated by field technicians. If you are one, [we need your cases](CONTRIBUTING.md).
 
 ## What it will say to you
 
@@ -118,6 +127,7 @@ What sets it apart:
 - **It asks before every change**, on four levels of risk.
 - **It creates a restore point before the first change**, checks that it really exists, and keeps a journal.
 - **It refuses risky practices**: registry cleaners, debloat scripts, switching Microsoft Defender off.
+- **It knows which tools to bring, and how to show them out**: built-in first, then a short list of guest tools, checked at the door and deleted afterwards.
 - **It speaks your language**, in plain words, to people who aren't technical.
 
 ## What it does
@@ -157,9 +167,44 @@ It stops and talks to you after three failed fixes, re-measures the original sym
 
 Consent is given per action, never per batch. Ask it to "just do everything at once" and it will explain why it won't: when several changes go in together, nobody can tell which one helped or broke something.
 
+### Making room
+
+"Disk full" gets its own method, because deleting is rarely reversible and no restore point brings a personal file back. The job is to find the few big things, not to sweep up thousands of small ones.
+
+1. **Disk health first.** A disk that reports errors gets a backup, not housekeeping.
+2. **Ask Windows before downloading anything.** Settings > System > Storage, then measure-only commands: `Dism /AnalyzeComponentStore` for the real size of WinSxS (File Explorer overstates it, because of hard links), `vssadmin list shadowstorage` for restore points, `powercfg /a` for hibernation.
+3. **A map only if the question is still open**, from a guest tool (below). It looks in the map; it deletes nothing from it.
+4. **Free one thing at a time**, cheapest and most reversible first, re-measuring after each. It stops when you have the room you need.
+
+Four actions have no way back and each needs its own yes, by name: removing the previous Windows installation, `/ResetBase`, shrinking restore-point storage, and Storage Sense's rule that deletes old downloads. It never deletes by hand in `C:\Windows\WinSxS`, `C:\Windows\Installer`, the driver store or a WSL virtual disk: on a disk map those are big blocks, and they are what a healthy Windows looks like.
+
+### Guest tools
+
+Sometimes Windows can't answer the question. Then, and only then, a small third-party tool comes in: downloaded by you, run without installing, deleted at the end of the visit, logged in the journal. Built-in tools always come first.
+
+| Question | Guest | Why this one | Watch out |
+|---|---|---|---|
+| Which folders fill the disk? | [WinDirStat](https://windirstat.net/), portable zip | Open source (GPL), free at work, no installer | It can delete: look, don't touch |
+| The same, with a tool that can only measure | [Sysinternals `du`](https://learn.microsoft.com/en-us/sysinternals/downloads/du) | From Microsoft; has no delete option at all | Text output |
+| What really starts with Windows? | [Sysinternals Autoruns](https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns) | Far more auto-start locations than Task Manager | Unticking is a change: the consent levels apply |
+| Raw disk health values | [CrystalDiskInfo](https://crystalmark.info/en/software/crystaldiskinfo/), ZIP edition | Open source (MIT) | Always asks for administrator rights |
+
+The tool you may have been thinking of is TreeSize Free. It is good, and so is WizTree, but both are free for **personal, non-commercial use only**: the skill proposes them on a strictly personal PC, never on one that is also used for work.
+
+A guest gets in only if it passes the door:
+
+- **One named question**, not "let's see what it finds".
+- **The publisher's address, typed**, never a search result, an ad or a download portal. Fake download sites for well-known utilities do reach the top of search results.
+- **The archive's SHA256 checked** against the publisher's, and **nothing unexpected inside**: in April 2026, an official site served genuine, validly signed programs with a malicious DLL beside them.
+- **The signer's name read out** before Windows asks for anything.
+- **A licence that fits the place.**
+- **No installer, no kernel driver, no health score, no "repair" button.**
+
+It starts the tool without administrator rights, looks, and acts through Windows, one item at a time. No antivirus exclusion, ever: if the antivirus objects, the antivirus wins. And it says plainly what it doesn't know: "portable" means no installer, not no trace, and what each tool writes outside its own folder has not been verified.
+
 ### What it refuses
 
-It won't pipe a remote script into PowerShell, install registry cleaners, "PC optimizers" or third-party driver updaters, apply debloat scripts or tweak packs, or switch off Windows Update, Microsoft Defender, the firewall or UAC. It won't add an antivirus exclusion because a tool asks for one, run heavy disk operations on a failing disk before a backup, or open remote access for someone you didn't contact yourself. Each time, it explains why in one sentence and offers the safe, built-in alternative. It also recognizes tech-support scams: Microsoft's messages never contain a phone number.
+It won't pipe a remote script into PowerShell, install registry cleaners, "PC optimizers" or third-party driver updaters, apply debloat scripts or tweak packs, or switch off Windows Update, Microsoft Defender, the firewall or UAC. It won't add an antivirus exclusion because a tool asks for one, run heavy disk operations on a failing disk before a backup, or open remote access for someone you didn't contact yourself. It won't fetch a tool from a search result or a download portal, delete anything from inside a disk analyzer, or accept a licence in your place without telling you. Each time, it explains why in one sentence and offers the safe, built-in alternative. It also recognizes tech-support scams: Microsoft's messages never contain a phone number.
 
 The whole skill is one Markdown file, with no scripts. Read it before you install it, as you would any skill: [koeki-it-support/SKILL.md](koeki-it-support/SKILL.md).
 
@@ -261,11 +306,11 @@ An illustrative exchange, shortened. The program name is invented.
 
 ## Evaluation
 
-[evals/scenarios.md](evals/scenarios.md) holds eleven test scenarios, starting with the story above. [evals/rubric.md](evals/rubric.md) holds the fixed scoring grid and the pressure tests (a hurried, annoyed or insistent person). No scored results are published yet.
+[evals/scenarios.md](evals/scenarios.md) holds thirteen test scenarios, starting with the story above. [evals/rubric.md](evals/rubric.md) holds the fixed scoring grid and the pressure tests (a hurried, annoyed or insistent person). No scored results are published yet.
 
 ## Limitations
 
-- **Version 0.1.** Grounded in the literature and Microsoft documentation, not yet reviewed by field technicians. Its case patterns are starting points, not verdicts.
+- **Version 0.2.** Grounded in the literature and Microsoft documentation, not yet reviewed by field technicians. Its case patterns are starting points, not verdicts.
 - **Windows 10 and 11 only.** Not for servers, Macs or troubleshooting Linux.
 - **It needs hands on the PC:** either a shell on that PC (for example, Claude Code running on it) or a copy-paste conversation in which you run each command. Administrator commands are always run by you.
 - **Not field-tested.** Scenarios exist; real-world results don't yet.
@@ -315,6 +360,20 @@ Windows:
 - Microsoft, "Microsoft Defender Antivirus compatibility": [learn.microsoft.com](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-compatibility)
 - Microsoft Security Blog, "Think before you ClickFix" (2025): [microsoft.com](https://www.microsoft.com/en-us/security/blog/2025/08/21/think-before-you-clickfix-analyzing-the-clickfix-social-engineering-technique/)
 - Microsoft, Windows 10 Extended Security Updates: [microsoft.com](https://www.microsoft.com/en-us/windows/extended-security-updates)
+
+Disk space and guest tools:
+
+- Microsoft, "Free up drive space in Windows": [support.microsoft.com](https://support.microsoft.com/en-us/windows/experience/storage-filemanagement/free-up-drive-space-in-windows)
+- Microsoft, "Determine the actual size of the WinSxS folder" and "Clean up the WinSxS folder": [learn.microsoft.com](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/determine-the-actual-size-of-the-winsxs-folder), [learn.microsoft.com](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/clean-up-the-winsxs-folder)
+- Microsoft, "Delete your previous version of Windows": [support.microsoft.com](https://support.microsoft.com/en-us/windows/delete-your-previous-version-of-windows-f8b26680-e083-c710-b757-7567d69dbb74)
+- Microsoft, "Manage drive space with Storage Sense": [support.microsoft.com](https://support.microsoft.com/windows/654f6ada-7bfc-45e5-966b-e24aded96ad5)
+- Microsoft, support policy for registry cleaning utilities: [support.microsoft.com](https://support.microsoft.com/en-us/topic/microsoft-support-policy-for-the-use-of-registry-cleaning-utilities-0485f4df-9520-3691-2461-7b0fd54e8b3a)
+- Microsoft, Defender alert on the WinRing0 driver: [support.microsoft.com](https://support.microsoft.com/en-us/windows/security/threat-malware-protection/microsoft-defender-antivirus-alert-vulnerabledriver-winnt-winring0)
+- WinDirStat (GPL): [windirstat.net](https://windirstat.net/), [source and releases](https://github.com/windirstat/windirstat)
+- Sysinternals licence terms: [learn.microsoft.com](https://learn.microsoft.com/en-us/sysinternals/license-terms)
+- TreeSize Free and WizTree licence terms: [jam-software.com](https://www.jam-software.com/treesize_free), [diskanalyzer.com](https://diskanalyzer.com/eula)
+- Kaspersky Securelist on the April 2026 CPUID incident: [securelist.com](https://securelist.com/tr/cpu-z/119365)
+- FBI IC3, search-engine ads impersonating brands (2022): [ic3.gov](https://www.ic3.gov/PSA/2022/PSA221221)
 
 Carbon:
 
