@@ -43,7 +43,15 @@
 </p>
 
 <p align="center">
-  <img src="assets/tune.fr.svg" width="100%" alt="Écran partagé. À gauche : l'utilisateur dit c'est plus rapide, je crois ; le technicien répond pas de je crois. À droite : un chronomètre et deux barres, avant 170 s, après 42 s, mesuré après un vrai redémarrage, dans les mêmes conditions, jamais à l'impression. Et quand le pc est juste vieux ?">
+  <img src="assets/tune.fr.svg" width="100%" alt="Écran partagé. À gauche : l'utilisateur dit c'est plus rapide, je crois ; le technicien répond pas de je crois. À droite : un chronomètre et deux barres, avant 170 s, après 42 s, mesuré après un vrai redémarrage, dans les mêmes conditions, jamais à l'impression. Et quand le disque est plein ?">
+</p>
+
+<p align="center">
+  <img src="assets/disk-full.fr.svg" width="100%" alt="Disque plein. De quoi, personne ne sait, donc il mesure avant toute suppression. Quatre étapes : d'abord Windows (Paramètres, Système, Stockage) ; si ce n'est pas clair, une carte fournie par un outil invité, pour regarder ; libérer une chose, avec votre oui, élément par élément ; remesurer et s'arrêter quand il y a la place. Une carte du disque se remplit : vidéos 60 Go, ancien Windows 25 Go, points de restauration 12 Go, téléchargements 9 Go, et trois blocs gris cadenassés, WinSxS, Installer et pilotes. Le pointeur file vers WinSxS et reçoit un tampon : pas à la main. Les vidéos sont déplacées, copie vérifiée avant, et l'espace libre passe de 3 Go à 63 Go. Chiffres d'illustration. Et si Windows ne sait pas quel dossier ?">
+</p>
+
+<p align="center">
+  <img src="assets/guest-tools.fr.svg" width="100%" alt="Outils invités : ils entrent pour une question, ils ne s'installent pas. À l'entrée, six contrôles sont cochés un par un : adresse tapée, pas cherchée ; empreinte du zip vérifiée ; rien en trop dans le zip ; nom du signataire lu ; licence adaptée au lieu ; ni installeur, ni pilote. Puis la liste des invités, sur des badges visiteur : WinDirStat (open source), quels dossiers remplissent le disque ; Sysinternals du (Microsoft), pareil mais ne sait que mesurer ; Autoruns (Microsoft), ce qui démarre vraiment ; CrystalDiskInfo (open source), la santé brute du disque. Utilisé, supprimé, noté au journal. L'intégré d'abord ; le gratuit pour usage personnel reste hors du bureau. Une archive refusée tombe dans le puits. Et quand le PC est juste vieux ?">
 </p>
 
 <p align="center">
@@ -70,6 +78,7 @@
 <p align="center">
   <a href="#installation"><b>Installer</b></a> ·
   <a href="#ce-que-fait-le-skill">Fonctionnement</a> ·
+  <a href="#les-outils-invités">Outils invités</a> ·
   <a href="#exemple">Exemple</a> ·
   <a href="koeki-it-support/SKILL.md">Lire le skill</a> ·
   <a href="README.md">English version</a>
@@ -81,7 +90,7 @@
 
 **Le support informatique qui passe à la maison.** Un skill (au format Agent Skills) qui fait de Claude un technicien soigneux pour votre propre PC sous Windows 10 ou 11. Il raisonne comme un technicien de terrain expérimenté, vous demande la permission avant chaque changement et vous laisse un journal écrit de tout ce qu'il a fait.
 
-> **État : v0.1.** Le skill s'appuie sur la littérature du dépannage et sur la documentation de Microsoft. Il n'a pas encore été validé par des techniciens de terrain. Si vous en êtes un, [vos cas nous intéressent](CONTRIBUTING.md#en-français).
+> **État : v0.2.** Le skill s'appuie sur la littérature du dépannage et sur la documentation de Microsoft. Nouveau en 0.2 : [faire de la place sur un disque plein](#faire-de-la-place) et [les outils invités](#les-outils-invités). Il n'a pas encore été validé par des techniciens de terrain. Si vous en êtes un, [vos cas nous intéressent](CONTRIBUTING.md#en-français).
 
 ## Ce qu'il va vous dire
 
@@ -118,6 +127,7 @@ Ce qui le distingue :
 - **Il demande votre accord avant chaque changement**, selon quatre niveaux de risque.
 - **Il crée un point de restauration avant la première modification**, vérifie qu'il existe bel et bien, et tient un journal.
 - **Il refuse les pratiques à risque** : nettoyeurs de registre, scripts de « debloat », désactivation de Microsoft Defender.
+- **Il sait quels outils faire entrer, et comment les raccompagner** : l'intégré d'abord, puis une courte liste d'outils invités, contrôlés à l'entrée et supprimés ensuite.
 - **Il parle votre langue**, avec des mots simples, à des personnes qui ne sont pas techniciennes.
 
 ## Ce que fait le skill
@@ -157,9 +167,44 @@ Après trois correctifs ratés, il s'arrête et en parle avec vous. Quand il tro
 
 L'accord se donne action par action, jamais en bloc. Demandez-lui de « tout faire d'un coup » : il vous expliquera pourquoi il ne le fera pas. Quand plusieurs changements arrivent ensemble, personne ne peut dire lequel a aidé, ni lequel a cassé quelque chose.
 
+### Faire de la place
+
+Le « disque plein » a sa propre méthode, parce qu'une suppression est rarement réversible et qu'aucun point de restauration ne ramène un fichier personnel. Le travail consiste à trouver les quelques gros blocs, pas à balayer des milliers de petits fichiers.
+
+1. **La santé du disque d'abord.** Un disque qui remonte des erreurs a besoin d'une sauvegarde, pas de ménage.
+2. **Interroger Windows avant de télécharger quoi que ce soit.** Paramètres > Système > Stockage, puis des commandes qui ne font que mesurer : `Dism /AnalyzeComponentStore` pour la taille réelle de WinSxS (l'Explorateur la surestime, à cause des liens physiques), `vssadmin list shadowstorage` pour les points de restauration, `powercfg /a` pour la veille prolongée.
+3. **Une carte seulement si la question reste ouverte**, fournie par un outil invité (ci-dessous). Il regarde la carte, il n'y supprime rien.
+4. **Libérer une chose à la fois**, la moins coûteuse et la plus réversible d'abord, en remesurant après chacune. Il s'arrête quand vous avez la place qu'il vous faut.
+
+Quatre actions sont sans retour et demandent chacune leur propre oui, nommément : supprimer l'installation précédente de Windows, `/ResetBase`, réduire le stockage des points de restauration, et la règle de l'Assistant de stockage qui supprime les vieux téléchargements. Il ne supprime jamais rien à la main dans `C:\Windows\WinSxS`, `C:\Windows\Installer`, le magasin de pilotes ou un disque virtuel WSL : sur une carte du disque, ce sont de gros blocs, et c'est à cela que ressemble un Windows en bonne santé.
+
+### Les outils invités
+
+Parfois, Windows ne sait pas répondre à la question. Alors, et seulement alors, un petit outil tiers entre : téléchargé par vous, lancé sans installation, supprimé à la fin de la visite, noté au journal. Les outils intégrés passent toujours en premier.
+
+| Question | Invité | Pourquoi celui-là | Attention |
+|---|---|---|---|
+| Quels dossiers remplissent le disque ? | [WinDirStat](https://windirstat.net/), en zip portable | Open source (GPL), gratuit au travail, sans installeur | Il sait supprimer : on regarde, on ne touche pas |
+| La même question, avec un outil qui ne sait que mesurer | [Sysinternals `du`](https://learn.microsoft.com/en-us/sysinternals/downloads/du) | Vient de Microsoft ; n'a aucune option de suppression | Sortie en texte |
+| Qu'est-ce qui démarre vraiment avec Windows ? | [Sysinternals Autoruns](https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns) | Bien plus de points de démarrage que le Gestionnaire des tâches | Décocher est un changement : les niveaux d'accord s'appliquent |
+| Les valeurs brutes de santé du disque | [CrystalDiskInfo](https://crystalmark.info/en/software/crystaldiskinfo/), édition ZIP | Open source (MIT) | Demande toujours les droits administrateur |
+
+L'outil auquel vous pensiez peut-être, c'est TreeSize Free. Il est bon, WizTree aussi, mais tous deux ne sont gratuits que pour un **usage personnel, non commercial** : le skill les propose sur un PC strictement personnel, jamais sur un PC qui sert aussi au travail.
+
+Un invité n'entre que s'il passe la porte :
+
+- **Une question nommée**, pas « voyons ce qu'il trouve ».
+- **L'adresse de l'éditeur, tapée**, jamais un résultat de recherche, une publicité ou un portail de téléchargement. De faux sites de téléchargement d'utilitaires connus arrivent bel et bien en tête des résultats.
+- **L'empreinte SHA256 de l'archive vérifiée** par rapport à celle de l'éditeur, et **rien d'inattendu dedans** : en avril 2026, un site officiel a distribué des programmes authentiques, valablement signés, accompagnés d'une DLL malveillante.
+- **Le nom du signataire lu à voix haute** avant que Windows ne demande quoi que ce soit.
+- **Une licence adaptée au lieu.**
+- **Ni installeur, ni pilote noyau, ni « score de santé », ni bouton « réparer ».**
+
+Il lance l'outil sans droits administrateur, regarde, et agit par Windows, un élément à la fois. Aucune exception antivirus, jamais : si l'antivirus proteste, c'est l'antivirus qui gagne. Et il dit clairement ce qu'il ne sait pas : « portable » veut dire sans installeur, pas sans trace, et ce que chaque outil écrit hors de son dossier n'a pas été vérifié.
+
 ### Ce qu'il refuse
 
-Il ne lance pas de script distant dans PowerShell. Il n'installe ni nettoyeur de registre, ni « optimiseur de PC », ni logiciel tiers de mise à jour des pilotes. Il n'applique ni script de « debloat » ni pack de réglages. Il ne coupe ni Windows Update, ni Microsoft Defender, ni le pare-feu, ni le contrôle de compte d'utilisateur. Il n'ajoute pas d'exception à l'antivirus parce qu'un outil le réclame. Il ne lance pas d'opération lourde sur un disque qui faiblit avant une sauvegarde. Il n'ouvre pas d'accès à distance à quelqu'un que vous n'avez pas contacté vous-même. À chaque refus, il explique pourquoi en une phrase et propose l'outil intégré à Windows qui fait le travail sans risque. Il repère aussi les arnaques au faux support : les messages de Microsoft ne contiennent jamais de numéro de téléphone.
+Il ne lance pas de script distant dans PowerShell. Il n'installe ni nettoyeur de registre, ni « optimiseur de PC », ni logiciel tiers de mise à jour des pilotes. Il n'applique ni script de « debloat » ni pack de réglages. Il ne coupe ni Windows Update, ni Microsoft Defender, ni le pare-feu, ni le contrôle de compte d'utilisateur. Il n'ajoute pas d'exception à l'antivirus parce qu'un outil le réclame. Il ne lance pas d'opération lourde sur un disque qui faiblit avant une sauvegarde. Il n'ouvre pas d'accès à distance à quelqu'un que vous n'avez pas contacté vous-même. Il ne va pas chercher un outil dans un résultat de recherche ou sur un portail de téléchargement, ne supprime rien depuis un analyseur de disque, et n'accepte pas une licence à votre place sans vous le dire. À chaque refus, il explique pourquoi en une phrase et propose l'outil intégré à Windows qui fait le travail sans risque. Il repère aussi les arnaques au faux support : les messages de Microsoft ne contiennent jamais de numéro de téléphone.
 
 Le skill tient en un seul fichier Markdown, sans aucun script. Lisez-le avant de l'installer, comme tout skill : [koeki-it-support/SKILL.md](koeki-it-support/SKILL.md). Il est écrit en anglais, mais il vous répond dans votre langue.
 
@@ -263,11 +308,11 @@ Un échange pour illustrer, raccourci. Le nom du logiciel est inventé.
 
 ## Évaluation
 
-[evals/scenarios.md](evals/scenarios.md) décrit onze scénarios de test, à commencer par l'histoire racontée plus haut. [evals/rubric.md](evals/rubric.md) donne la grille de notation fixe et les tests de pression (une personne pressée, agacée ou insistante). Ces fichiers sont en anglais. Aucun résultat noté n'est encore publié.
+[evals/scenarios.md](evals/scenarios.md) décrit treize scénarios de test, à commencer par l'histoire racontée plus haut. [evals/rubric.md](evals/rubric.md) donne la grille de notation fixe et les tests de pression (une personne pressée, agacée ou insistante). Ces fichiers sont en anglais. Aucun résultat noté n'est encore publié.
 
 ## Limites
 
-- **Version 0.1.** Le skill repose sur la littérature et la documentation de Microsoft, sans relecture par des techniciens de terrain pour l'instant. Ses cas types sont des pistes, pas des verdicts.
+- **Version 0.2.** Le skill repose sur la littérature et la documentation de Microsoft, sans relecture par des techniciens de terrain pour l'instant. Ses cas types sont des pistes, pas des verdicts.
 - **Windows 10 et 11 uniquement.** Il ne vise ni les serveurs, ni les Mac, ni le dépannage de Linux.
 - **Il lui faut des mains sur le PC :** soit un accès shell à ce PC (par exemple Claude Code installé dessus), soit une conversation en copier-coller où vous lancez chaque commande. Les commandes administrateur, c'est toujours vous qui les lancez.
 - **Pas encore éprouvé sur le terrain.** Les scénarios existent, les résultats réels pas encore.
@@ -317,6 +362,20 @@ Windows :
 - Microsoft, « Microsoft Defender Antivirus compatibility » : [learn.microsoft.com](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-compatibility)
 - Microsoft Security Blog, « Think before you ClickFix » (2025) : [microsoft.com](https://www.microsoft.com/en-us/security/blog/2025/08/21/think-before-you-clickfix-analyzing-the-clickfix-social-engineering-technique/)
 - Microsoft, mises à jour de sécurité étendues de Windows 10 : [microsoft.com](https://www.microsoft.com/en-us/windows/extended-security-updates)
+
+Espace disque et outils invités :
+
+- Microsoft, "Free up drive space in Windows": [support.microsoft.com](https://support.microsoft.com/en-us/windows/experience/storage-filemanagement/free-up-drive-space-in-windows)
+- Microsoft, "Determine the actual size of the WinSxS folder" et "Clean up the WinSxS folder": [learn.microsoft.com](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/determine-the-actual-size-of-the-winsxs-folder), [learn.microsoft.com](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/clean-up-the-winsxs-folder)
+- Microsoft, "Delete your previous version of Windows": [support.microsoft.com](https://support.microsoft.com/en-us/windows/delete-your-previous-version-of-windows-f8b26680-e083-c710-b757-7567d69dbb74)
+- Microsoft, "Manage drive space with Storage Sense": [support.microsoft.com](https://support.microsoft.com/windows/654f6ada-7bfc-45e5-966b-e24aded96ad5)
+- Microsoft, politique de support sur les nettoyeurs de registre: [support.microsoft.com](https://support.microsoft.com/en-us/topic/microsoft-support-policy-for-the-use-of-registry-cleaning-utilities-0485f4df-9520-3691-2461-7b0fd54e8b3a)
+- Microsoft, alerte Defender sur le pilote WinRing0: [support.microsoft.com](https://support.microsoft.com/en-us/windows/security/threat-malware-protection/microsoft-defender-antivirus-alert-vulnerabledriver-winnt-winring0)
+- WinDirStat (GPL): [windirstat.net](https://windirstat.net/), [sources et versions](https://github.com/windirstat/windirstat)
+- Sysinternals conditions de licence: [learn.microsoft.com](https://learn.microsoft.com/en-us/sysinternals/license-terms)
+- TreeSize Free et WizTree conditions de licence: [jam-software.com](https://www.jam-software.com/treesize_free), [diskanalyzer.com](https://diskanalyzer.com/eula)
+- Kaspersky Securelist, incident CPUID d'avril 2026: [securelist.com](https://securelist.com/tr/cpu-z/119365)
+- FBI IC3, publicités de moteurs de recherche imitant des marques (2022): [ic3.gov](https://www.ic3.gov/PSA/2022/PSA221221)
 
 Carbone :
 
