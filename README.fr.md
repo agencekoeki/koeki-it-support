@@ -8,6 +8,7 @@
   <a href="https://agentskills.io"><img alt="format Agent Skills" src="https://img.shields.io/badge/format-Agent%20Skills-5fd0a0?labelColor=0a0d16"></a>
   <img alt="Windows 10 | 11" src="https://img.shields.io/badge/Windows-10%20%7C%2011-5a9be0?labelColor=0a0d16">
   <img alt="scripts: aucun" src="https://img.shields.io/badge/scripts-aucun-f6eedb?labelColor=0a0d16">
+  <img alt="redémarrage : un vrai" src="https://img.shields.io/badge/red%C3%A9marrage-un%20vrai-f5b83d?labelColor=0a0d16">
 </p>
 
 <p align="center">
@@ -27,6 +28,21 @@
 <p align="center">
   <img src="assets/demo.fr.svg" width="100%" alt="Échange pour illustrer. Vous : mon PC met trois minutes à démarrer depuis la semaine dernière. Claude lit le journal de démarrage (niveau 0, lecture seule), formule une première hypothèse, puis demande votre accord avant de désactiver une application au démarrage (niveau 1). Journal : démarrage de 170 s à 42 s, mesuré après un vrai redémarrage.">
 </p>
+
+## Ce qu'il va vous dire
+
+Oui, il vous demandera si vous avez redémarré. Un vrai **Redémarrer**, pas **Arrêter** : avec le démarrage rapide, Windows ne fait pas la même chose dans les deux cas. Ce qui le distingue, c'est ce qu'il fait après le redémarrage.
+
+| Vous | Lui |
+|---|---|
+| « Si j'ai essayé de redémarrer ? Évidemment. » | « Arrêter, ou Redémarrer ? Faisons un vrai Redémarrer. Je patiente. » |
+| « Réparez tout d'un coup, qu'on en finisse. » | « Non. Un changement à la fois, sinon on ne saura jamais lequel a marché. » |
+| « J'ai trouvé un optimiseur de PC gratuit. » | « Reposez-le, s'il vous plaît. » Puis l'outil déjà intégré à Windows qui fait le travail. |
+| « Defender me gêne. Coupez-le. » | « Non. » Une phrase pour dire pourquoi, et une solution sans risque. |
+| « Une fenêtre me dit d'appeler Microsoft à ce numéro. » | « Ce n'est pas Microsoft. Leurs messages ne contiennent jamais de numéro de téléphone. » |
+| « Ça a l'air plus rapide, je crois. » | « On ne fait pas dans le "je crois". On redémarre, on remesure, et ensuite je l'écris au journal. » |
+
+Ces répliques sont là pour illustrer, ce ne sont pas des transcriptions : le skill est plus poli, et tout aussi têtu. Le comportement derrière chacune est écrit noir sur blanc dans [le skill](koeki-it-support/SKILL.md).
 
 ## D'où vient ce skill
 
@@ -282,6 +298,8 @@ Nous cherchons surtout des techniciens de terrain prêts à raconter de vrais ca
 Conçu par [KOEKI SAS](https://www.koeki.fr), cabinet de conseil en IA et en SEO, en France. Écrit par Sébastien Grillot.
 
 La méthode doit beaucoup aux travaux de David Agans, des auteurs du livre SRE de Google, de Brendan Gregg, de Kepner-Tregoe, de Mark Russinovich et de Gary Klein. Les erreurs sont les nôtres.
+
+Le ton doit quelque chose à un certain service informatique britannique, installé au sous-sol. La méthode, non.
 
 ## Licence
 

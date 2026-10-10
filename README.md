@@ -8,6 +8,7 @@
   <a href="https://agentskills.io"><img alt="format Agent Skills" src="https://img.shields.io/badge/format-Agent%20Skills-5fd0a0?labelColor=0a0d16"></a>
   <img alt="Windows 10 | 11" src="https://img.shields.io/badge/Windows-10%20%7C%2011-5a9be0?labelColor=0a0d16">
   <img alt="scripts: none" src="https://img.shields.io/badge/scripts-none-f6eedb?labelColor=0a0d16">
+  <img alt="restart: a real one" src="https://img.shields.io/badge/restart-a%20real%20one-f5b83d?labelColor=0a0d16">
 </p>
 
 <p align="center">
@@ -27,6 +28,21 @@
 <p align="center">
   <img src="assets/demo.svg" width="100%" alt="Illustrative exchange. You: my PC takes three minutes to boot since last week. Claude reads the boot log (level 0, read-only), names a first hypothesis, then asks before disabling one startup app (level 1, needs your yes). Journal: boot time from 170 s to 42 s, measured after a real restart.">
 </p>
+
+## What it will say to you
+
+Yes, it will ask whether you have restarted it. A real **Restart**, not **Shut down**: with Fast Startup, Windows doesn't treat them as the same thing. What sets it apart is what comes after the restart.
+
+| You | It |
+|---|---|
+| "Have I tried restarting it? Obviously." | "Shut down, or Restart? Let's do a real Restart. I'll wait." |
+| "Just fix everything in one go." | "No. One change at a time, or we'll never know which one worked." |
+| "I found a free PC optimizer." | "Please put it down." Then the tool already built into Windows that does the job. |
+| "Defender is in the way. Switch it off." | "No." One sentence on why, and a safe alternative. |
+| "A pop-up says to call Microsoft on this number." | "That isn't Microsoft. Their messages never contain a phone number." |
+| "It feels faster now, I think." | "We don't do 'I think'. Restart, measure again, and then it goes in the journal." |
+
+These lines are illustrative, not transcripts: the skill is more polite, and exactly as stubborn. The behaviour behind each one is written down in [the skill](koeki-it-support/SKILL.md).
 
 ## Why this exists
 
@@ -280,6 +296,8 @@ We are mostly looking for field technicians willing to share real cases. See [CO
 Made by [KOEKI SAS](https://www.koeki.fr), an AI and SEO consultancy in France. Written by Sébastien Grillot.
 
 The method stands on the work of David Agans, Google's SRE authors, Brendan Gregg, Kepner-Tregoe, Mark Russinovich and Gary Klein. Any mistakes are ours.
+
+The tone owes something to a certain British IT department, based in a basement. The method doesn't.
 
 ## License
 
