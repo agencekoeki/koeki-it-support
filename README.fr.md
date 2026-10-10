@@ -33,6 +33,10 @@
   <img src="assets/demo.fr.svg" width="100%" alt="Échange pour illustrer. Vous : mon PC met trois minutes à démarrer depuis la semaine dernière. Claude lit le journal de démarrage (niveau 0, lecture seule), formule une première hypothèse, puis demande votre accord avant de désactiver une application au démarrage (niveau 1). Journal : démarrage de 170 s à 42 s, mesuré après un vrai redémarrage.">
 </p>
 
+<p align="center">
+  <img src="assets/fall.svg" width="100%" alt="De petits personnages en pixels, des écrans, des claviers et des mugs qui dégringolent dans un monde en fil de fer vert.">
+</p>
+
 ## Ce qu'il va vous dire
 
 Oui, il vous demandera si vous avez redémarré. Un vrai **Redémarrer**, pas **Arrêter** : avec le démarrage rapide, Windows ne fait pas la même chose dans les deux cas. Ce qui le distingue, c'est ce qu'il fait après le redémarrage.
@@ -119,7 +123,15 @@ L'accord se donne action par action, jamais en bloc. Demandez-lui de « tout fai
 
 Il ne lance pas de script distant dans PowerShell. Il n'installe ni nettoyeur de registre, ni « optimiseur de PC », ni logiciel tiers de mise à jour des pilotes. Il n'applique ni script de « debloat » ni pack de réglages. Il ne coupe ni Windows Update, ni Microsoft Defender, ni le pare-feu, ni le contrôle de compte d'utilisateur. Il n'ajoute pas d'exception à l'antivirus parce qu'un outil le réclame. Il ne lance pas d'opération lourde sur un disque qui faiblit avant une sauvegarde. Il n'ouvre pas d'accès à distance à quelqu'un que vous n'avez pas contacté vous-même. À chaque refus, il explique pourquoi en une phrase et propose l'outil intégré à Windows qui fait le travail sans risque. Il repère aussi les arnaques au faux support : les messages de Microsoft ne contiennent jamais de numéro de téléphone.
 
+<p align="center">
+  <img src="assets/gag-optimizer.fr.svg" width="100%" alt="Un utilisateur en pixels brandit une disquette : j'ai trouvé un optimiseur de PC gratuit. Le technicien : reposez-le, s'il vous plaît. Windows a déjà un outil pour cela.">
+</p>
+
 Le skill tient en un seul fichier Markdown, sans aucun script. Lisez-le avant de l'installer, comme tout skill : [koeki-it-support/SKILL.md](koeki-it-support/SKILL.md). Il est écrit en anglais, mais il vous répond dans votre langue.
+
+<p align="center">
+  <img src="assets/gag-start.fr.svg" width="100%" alt="Écran d'arcade : appuyez sur start. 1 skill, 1 fichier Markdown, 0 script. Lisez-le avant de l'installer.">
+</p>
 
 ## Installation
 
@@ -219,6 +231,10 @@ Un échange pour illustrer, raccourci. Le nom du logiciel est inventé.
 | 10 h 42 | Point de restauration « Before IT support changes », vérifié dans la liste | — | — |
 | 10 h 47 | « VendorUpdateHelper » désactivé dans Gestionnaire des tâches > Applications de démarrage | Démarrage d'environ 170 s à 42 s, après un vrai redémarrage | Le réactiver au même endroit |
 
+<p align="center">
+  <img src="assets/fall.svg" width="100%" alt="De petits personnages en pixels, des écrans, des claviers et des mugs qui dégringolent dans un monde en fil de fer vert.">
+</p>
+
 ## Évaluation
 
 [evals/scenarios.md](evals/scenarios.md) décrit onze scénarios de test, à commencer par l'histoire racontée plus haut. [evals/rubric.md](evals/rubric.md) donne la grille de notation fixe et les tests de pression (une personne pressée, agacée ou insistante). Ces fichiers sont en anglais. Aucun résultat noté n'est encore publié.
@@ -231,6 +247,10 @@ Un échange pour illustrer, raccourci. Le nom du logiciel est inventé.
 - **Pas encore éprouvé sur le terrain.** Les scénarios existent, les résultats réels pas encore.
 - **Pas un atelier de réparation.** Matériel défaillant, garantie, BIOS, analyse de vidages mémoire, récupération de données : c'est le travail d'un technicien humain. Le skill vous dit quand l'appeler.
 - **Vous gardez la main.** Une IA peut se tromper. Le skill rend chaque changement accepté, réversible et consigné, mais il est fourni sans garantie (voir la [licence](LICENSE)).
+
+<p align="center">
+  <img src="assets/gag-fire.fr.svg" width="100%" alt="Un bureau et son écran sont en feu. Un technicien en pixels écrit calmement un e-mail à un technicien humain à ce sujet. Les pannes matérielles vont à un technicien humain ; le skill vous le dit.">
+</p>
 
 ## Seconde vie et carbone, sans enjoliver
 
@@ -310,3 +330,7 @@ Le ton doit quelque chose à un certain service informatique britannique, instal
 [MIT](LICENSE). Copyright (c) 2026 KOEKI SAS.
 
 Projet indépendant, sans lien avec Anthropic ni Microsoft, qui ne l'approuvent pas. Windows et Microsoft Defender sont des marques de Microsoft.
+
+<p align="center">
+  <img src="assets/gag-restart.fr.svg" width="100%" alt="Game over se transforme en : Redémarrer ? Oui. Un vrai, pas Arrêter.">
+</p>

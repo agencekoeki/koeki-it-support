@@ -33,6 +33,10 @@
   <img src="assets/demo.svg" width="100%" alt="Illustrative exchange. You: my PC takes three minutes to boot since last week. Claude reads the boot log (level 0, read-only), names a first hypothesis, then asks before disabling one startup app (level 1, needs your yes). Journal: boot time from 170 s to 42 s, measured after a real restart.">
 </p>
 
+<p align="center">
+  <img src="assets/fall.svg" width="100%" alt="Small pixel people, monitors, keyboards and mugs tumbling down through a green wireframe world.">
+</p>
+
 ## What it will say to you
 
 Yes, it will ask whether you have restarted it. A real **Restart**, not **Shut down**: with Fast Startup, Windows doesn't treat them as the same thing. What sets it apart is what comes after the restart.
@@ -119,7 +123,15 @@ Consent is given per action, never per batch. Ask it to "just do everything at o
 
 It won't pipe a remote script into PowerShell, install registry cleaners, "PC optimizers" or third-party driver updaters, apply debloat scripts or tweak packs, or switch off Windows Update, Microsoft Defender, the firewall or UAC. It won't add an antivirus exclusion because a tool asks for one, run heavy disk operations on a failing disk before a backup, or open remote access for someone you didn't contact yourself. Each time, it explains why in one sentence and offers the safe, built-in alternative. It also recognizes tech-support scams: Microsoft's messages never contain a phone number.
 
+<p align="center">
+  <img src="assets/gag-optimizer.svg" width="100%" alt="A pixel user holds up a floppy disk: I found a free PC optimizer. The technician: please put it down. Windows already has a tool for that.">
+</p>
+
 The whole skill is one Markdown file, with no scripts. Read it before you install it, as you would any skill: [koeki-it-support/SKILL.md](koeki-it-support/SKILL.md).
+
+<p align="center">
+  <img src="assets/gag-start.svg" width="100%" alt="Arcade screen: press start. 1 skill, 1 Markdown file, 0 scripts. Read it before you install it.">
+</p>
 
 ## Installation
 
@@ -217,6 +229,10 @@ An illustrative exchange, shortened. The program name is invented.
 | 10:42 | Restore point "Before IT support changes", checked in the list | — | — |
 | 10:47 | Disabled "VendorUpdateHelper" in Task Manager > Startup apps | Boot from about 170 s to 42 s, after a real restart | Re-enable it in Task Manager > Startup apps |
 
+<p align="center">
+  <img src="assets/fall.svg" width="100%" alt="Small pixel people, monitors, keyboards and mugs tumbling down through a green wireframe world.">
+</p>
+
 ## Evaluation
 
 [evals/scenarios.md](evals/scenarios.md) holds eleven test scenarios, starting with the story above. [evals/rubric.md](evals/rubric.md) holds the fixed scoring grid and the pressure tests (a hurried, annoyed or insistent person). No scored results are published yet.
@@ -229,6 +245,10 @@ An illustrative exchange, shortened. The program name is invented.
 - **Not field-tested.** Scenarios exist; real-world results don't yet.
 - **Not a repair shop.** Failing hardware, warranty cases, BIOS problems, crash-dump analysis and data recovery belong with a human technician. The skill tells you when.
 - **You stay in charge.** An AI can be wrong. The skill makes every change consented, reversible and logged, but it comes with no warranty (see the [license](LICENSE)).
+
+<p align="center">
+  <img src="assets/gag-fire.svg" width="100%" alt="A desk and its monitor are on fire. A pixel technician calmly writes an e-mail to a human technician about it. Hardware failures go to a human technician; the skill tells you when.">
+</p>
 
 ## Second life and carbon, honestly
 
@@ -308,3 +328,7 @@ The tone owes something to a certain British IT department, based in a basement.
 [MIT](LICENSE). Copyright (c) 2026 KOEKI SAS.
 
 Independent project, not affiliated with or endorsed by Anthropic or Microsoft. Windows and Microsoft Defender are trademarks of Microsoft.
+
+<p align="center">
+  <img src="assets/gag-restart.svg" width="100%" alt="Game over glitches into: Restart? Yes. A real one, not Shut down.">
+</p>
