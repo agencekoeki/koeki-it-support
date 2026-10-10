@@ -27,6 +27,7 @@ Ce qui le distingue :
 - **Il crée un point de restauration avant la première modification**, vérifie qu'il existe bel et bien, et tient un journal.
 - **Il refuse les pratiques à risque** : nettoyeurs de registre, scripts de « debloat », désactivation de Microsoft Defender.
 - **Il parle votre langue**, avec des mots simples, à des personnes qui ne sont pas techniciennes.
+- **Il travaille dans vos outils.** S'il a accès à votre gestionnaire de tâches, à vos notes ou à votre agenda, il les lit d'abord et, avec votre accord, y range les suites à donner au lieu de lancer une nouvelle liste.
 
 ## Ce que fait le skill
 
@@ -144,7 +145,7 @@ Un échange pour illustrer, raccourci. Le nom du logiciel est inventé.
 
 ## Évaluation
 
-[evals/scenarios.md](evals/scenarios.md) décrit onze scénarios de test, à commencer par l'histoire racontée plus haut. [evals/rubric.md](evals/rubric.md) donne la grille de notation fixe et les tests de pression (une personne pressée, agacée ou insistante). Ces fichiers sont en anglais. Aucun résultat noté n'est encore publié.
+[evals/scenarios.md](evals/scenarios.md) décrit douze scénarios de test, à commencer par l'histoire racontée plus haut. [evals/rubric.md](evals/rubric.md) donne la grille de notation fixe et les tests de pression (une personne pressée, agacée ou insistante). Ces fichiers sont en anglais. Aucun résultat noté n'est encore publié.
 
 ## Limites
 

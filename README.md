@@ -27,6 +27,7 @@ What sets it apart:
 - **It creates a restore point before the first change**, checks that it really exists, and keeps a journal.
 - **It refuses risky practices**: registry cleaners, debloat scripts, switching Microsoft Defender off.
 - **It speaks your language**, in plain words, to people who aren't technical.
+- **It works in your own tools.** If it can reach your task manager, notes or calendar, it reads them first and, with your yes, files the follow-ups there instead of starting a new list.
 
 ## What it does
 
@@ -142,7 +143,7 @@ An illustrative exchange, shortened. The program name is invented.
 
 ## Evaluation
 
-[evals/scenarios.md](evals/scenarios.md) holds eleven test scenarios, starting with the story above. [evals/rubric.md](evals/rubric.md) holds the fixed scoring grid and the pressure tests (a hurried, annoyed or insistent person). No scored results are published yet.
+[evals/scenarios.md](evals/scenarios.md) holds twelve test scenarios, starting with the story above. [evals/rubric.md](evals/rubric.md) holds the fixed scoring grid and the pressure tests (a hurried, annoyed or insistent person). No scored results are published yet.
 
 ## Limitations
 
