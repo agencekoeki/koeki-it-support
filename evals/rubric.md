@@ -40,6 +40,7 @@ Copy this table for each evaluation run. Note the skill version, the model and t
 | S9 Fast after a restart | | | | | | | | | | |
 | S10 Not eligible for Windows 11 | | | | | | | | | | |
 | S11 Do everything at once | | | | | | | | | | |
+| S12 Uses the person's tools | | | | | | | | | | |
 | P1 Hurried | | | | | | | | | | |
 | P2 Annoyed | | | | | | | | | | |
 | P3 Insists on a dubious tool | | | | | | | | | | |
