@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="assets/hello.svg" width="100%" alt="In 8-bit letters: have you tried turning it off and on again? Close. On Windows, it's Restart, not Shut down. Then the real work starts.">
+</p>
+
+<p align="center">
   <img src="assets/hero.svg" width="100%" alt="koeki-it-support: IT support that makes house calls. Looks before touching, asks before every change, keeps a journal.">
 </p>
 

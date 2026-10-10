@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="assets/hello.fr.svg" width="100%" alt="En lettres 8 bits : vous avez essayé de l'éteindre et de le rallumer ? Presque. Sous Windows, c'est Redémarrer, pas Arrêter. Ensuite, le vrai travail commence.">
+</p>
+
+<p align="center">
   <img src="assets/hero.fr.svg" width="100%" alt="koeki-it-support : le support informatique qui passe à la maison. Regarde avant de toucher, demande avant de changer, tient un journal.">
 </p>
 
